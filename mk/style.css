@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Language Link (MK) */
+nav ul li.language {
+    margin-left: 40px; /* Поголема раздалеченост од другите линкови */
+}
+
+nav ul li.language a {
+    background-color: #4CAF50; /* Зеленкаста позадина за да се истакне */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li.language a:hover {
+    background-color: #45a049; /* Потемно зелена при hover */
+}
+
+/* Hero Image */
+.hero-image {
+    width: 100%;
+    height: 400px; /* Ограничена висина */
+    overflow: hidden; /* Исекува вишок */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.hero-image img {
+    width: 100%; /* Ширината ја покрива целата страница */
+    height: auto; /* Ги задржува пропорциите на сликата */
+    object-fit: cover; /* Ја исекува сликата ако не одговара */
+    object-position: center; /* Центрирање на сликата */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li.language {
+        margin-left: 20px; /* Намалена маргина за мобилни */
+    }
+
+    .hero-image {
+        height: 300px; /* Помала висина за мобилни уреди */
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero-image {
+        height: 500px; /* Поголема висина за големи екрани */
+    }
+}
