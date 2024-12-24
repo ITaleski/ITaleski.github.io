@@ -24,31 +24,37 @@
 
 <main>
     <h1>Contact Us</h1>
-    <p>Feel free to reach out through the form below or connect with us on social media:</p>
-
-    <!-- Contact Form -->
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-        <div>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+    <div class="contact-container">
+        <!-- Лев текст -->
+        <div class="contact-info">
+            <p>Climbing Club Zlatovrv</p>
+            <p>ul. Borka Taleski 0</p>
+            <p>Prilep, North Macedonia</p>
         </div>
-        <div>
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Send</button>
-    </form>
-
-    <!-- Social Media Links -->
+        <!-- Десна форма -->
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <div>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+	<!-- Social Media Links -->
     <div class="social-media">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
     </div>
 </main>
+
 
 <footer>
     <p>&copy; 2024 SCC Zlatovrv</p>

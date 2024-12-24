@@ -24,26 +24,31 @@
 
 <main>
     <h1>Контакт</h1>
-    <p>Контактирајте нè преку формата подолу или преку нашите социјални мрежи:</p>
-
-    <!-- Contact Form -->
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-        <div>
-            <label for="name">Вашето име:</label>
-            <input type="text" id="name" name="name" required>
+    <div class="contact-container">
+        <!-- Лев текст -->
+        <div class="contact-info">
+            <p>Спортско Качувачки Клуб Златоврв</p>
+            <p>ул. Борка Талески број 0</p>
+            <p>Прилеп, Северна Македонија</p>
         </div>
-        <div>
-            <label for="email">Вашата е-пошта:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="message">Порака:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Испрати</button>
-    </form>
-
-    <!-- Social Media Links -->
+        <!-- Десна форма -->
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <div>
+                <label for="name">Вашето име:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Вашиот e-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Порака:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Прати</button>
+        </form>
+    </div>
+	<!-- Social Media Links -->
     <div class="social-media">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>

@@ -8,15 +8,15 @@ body {
 
 /* Logo */
 .logo {
-    position: absolute; /* Поставување над сите елементи */
-    top: 10px; /* Растојание од врвот */
-    left: 10px; /* Растојание од левата страна */
-    z-index: 15; /* Висок слој за да биде над другите елементи */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 15;
 }
 
 .logo img {
-    max-width: 100px; /* Намалено за 1.5 пати (од 150px на 100px) */
-    height: auto; /* Автоматска висина според ширината */
+    max-width: 100px;
+    height: auto;
     display: block;
 }
 
@@ -30,9 +30,9 @@ nav {
     z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Порамнување на менито на десната страна */
+    justify-content: flex-end;
     color: white;
-    padding-left: 120px; /* Оставено место за логото */
+    padding-left: 120px;
 }
 
 nav ul {
@@ -158,10 +158,31 @@ footer {
     padding: 10px 0;
 }
 
-/* Contact Form */
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px; /* Простор помеѓу текстот и формата */
+}
+
+.contact-info {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.contact-info p {
+    margin: 0 0 10px;
+}
+
 form {
-    max-width: 600px;
-    margin: 30px auto;
+    flex: 1;
+    max-width: 100%;
     padding: 25px 30px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -217,20 +238,47 @@ form button:hover {
     background-color: #45a049;
 }
 
-/* Social Media Links */
-.social-media {
+/* Routes Section */
+#routes {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#routes h2 {
     text-align: center;
-    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
-.social-media a {
-    margin: 0 15px;
+.route {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    gap: 20px;
+}
+
+.route img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.route-info {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
     color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 24px;
 }
 
-social-media a:hover {
+.route-info p {
+    margin: 5px 0;
+}
+
+.route-info strong {
     color: #4CAF50;
 }
