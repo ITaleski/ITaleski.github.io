@@ -6,6 +6,20 @@ body {
     line-height: 1.6;
 }
 
+/* Logo */
+.logo {
+    position: absolute; /* Поставување над сите елементи */
+    top: 10px; /* Растојание од врвот */
+    left: 10px; /* Растојание од левата страна */
+    z-index: 15; /* Висок слој за да биде над другите елементи */
+}
+
+.logo img {
+    max-width: 100px; /* Намалено за 1.5 пати (од 150px на 100px) */
+    height: auto; /* Автоматска висина според ширината */
+    display: block;
+}
+
 /* Navigation Bar */
 nav {
     background-color: #333;
@@ -16,13 +30,9 @@ nav {
     z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end; /* Порамнување на менито на десната страна */
     color: white;
-}
-
-nav .logo {
-    font-size: 18px;
-    font-weight: bold;
+    padding-left: 120px; /* Оставено место за логото */
 }
 
 nav ul {
@@ -221,6 +231,6 @@ form button:hover {
     font-size: 24px;
 }
 
-.social-media a:hover {
+social-media a:hover {
     color: #4CAF50;
 }
