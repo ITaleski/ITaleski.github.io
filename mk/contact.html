@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакт</title>
+    <link rel="stylesheet" href="../en/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">СКК Златоврв</div>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="menu">
+        <li><a href="index.html">Почетна</a></li>
+        <li><a href="about.html">За Нас</a></li>
+        <li><a href="gallery.html">Галерија</a></li>
+        <li><a href="routes.html">Насоки</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Контакт</h1>
+    <p>Контактирајте нè преку формата подолу или преку нашите социјални мрежи:</p>
+
+    <!-- Contact Form -->
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <div>
+            <label for="name">Вашето име:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Вашата е-пошта:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Порака:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Испрати</button>
+    </form>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 СКК Златоврв</p>
+</footer>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('open');
+    });
+</script>
+
+</body>
+</html>

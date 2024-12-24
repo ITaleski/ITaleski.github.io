@@ -17,12 +17,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: white;
 }
 
 nav .logo {
     font-size: 18px;
     font-weight: bold;
-    color: white;
 }
 
 nav ul {
@@ -52,11 +52,11 @@ nav ul li a:hover {
 
 /* Language Link (MK) */
 nav ul li.language {
-    margin-left: 40px; /* Поголема раздалеченост од другите линкови */
+    margin-left: 50px;
 }
 
 nav ul li.language a {
-    background-color: #4CAF50; /* Зеленкаста позадина за да се истакне */
+    background-color: #4CAF50;
     color: white;
     padding: 5px 15px;
     border-radius: 5px;
@@ -64,14 +64,60 @@ nav ul li.language a {
 }
 
 nav ul li.language a:hover {
-    background-color: #45a049; /* Потемно зелена при hover */
+    background-color: #45a049;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav ul.menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    nav ul.menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul.menu.open {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
 
 /* Hero Image */
 .hero-image {
     width: 100%;
-    height: 400px; /* Ограничена висина */
-    overflow: hidden; /* Исекува вишок */
+    height: 400px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,10 +125,10 @@ nav ul li.language a:hover {
 }
 
 .hero-image img {
-    width: 100%; /* Ширината ја покрива целата страница */
-    height: auto; /* Ги задржува пропорциите на сликата */
-    object-fit: cover; /* Ја исекува сликата ако не одговара */
-    object-position: center; /* Центрирање на сликата */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Main Content */
@@ -100,21 +146,4 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul li.language {
-        margin-left: 20px; /* Намалена маргина за мобилни */
-    }
-
-    .hero-image {
-        height: 300px; /* Помала висина за мобилни уреди */
-    }
-}
-
-@media (min-width: 1280px) {
-    .hero-image {
-        height: 500px; /* Поголема висина за големи екрани */
-    }
 }
