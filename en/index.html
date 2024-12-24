@@ -10,13 +10,13 @@
 
 <nav>
     <div class="logo">SCC Zlatovrv</div>
-    <ul>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#routes">Routes</a></li>
         <li><a href="#contact">Contact</a></li>
-        <!-- Додаден линк за македонската верзија -->
         <li class="language"><a href="../mk/index.html">MK</a></li>
     </ul>
 </nav>
@@ -50,6 +50,13 @@
 <footer>
     <p>&copy; 2024 Italeski</p>
 </footer>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>

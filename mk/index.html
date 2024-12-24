@@ -10,7 +10,8 @@
 
 <nav>
     <div class="logo">СКК Златоврв</div>
-    <ul>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="menu">
         <li><a href="#home">Почетна</a></li>
         <li><a href="#about">За Нас</a></li>
         <li><a href="#gallery">Галерија</a></li>
@@ -50,6 +51,14 @@
 <footer>
     <p>&copy; 2024 Italeski</p>
 </footer>
+
+<script>
+    // JavaScript за паѓачкото мени
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>
