@@ -282,3 +282,81 @@ form button:hover {
 .route-info strong {
     color: #4CAF50;
 }
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 80%; /* Adjust width to control the amount of adjacent images shown */
+}
+
+/* Carousel Images Wrapper */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Images */
+.carousel-images img {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 50%; /* Ensure images don't exceed their container */
+    height: auto;
+	max-height: 500px; /* Додава максимална висина за сликите */
+    object-fit: scale-down;
+    border-radius: 8px;
+    margin: 0 15px; /* Space between images */
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.4;
+}
+
+/* Active Image */
+.carousel-images img.active {
+    transform: scale(1.1); /* Slightly enlarge the active image */
+    opacity: 1;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-images img {
+        margin: 0 2px;
+    }
+
+    .carousel-btn {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+

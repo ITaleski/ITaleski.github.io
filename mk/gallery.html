@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>За Нас</title>
+    <title>Галерија</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,14 +23,75 @@
 
 <main>
     <h1>Галерија</h1>
-    <p>Ова е страната За Нас. Дознајте повеќе за нашата организација.</p>
+    <section class="carousel-container">
+        <h2>КуциМаци</h2>
+        <div class="carousel" id="gallery1">
+            <button class="carousel-btn prev" aria-label="Previous">&lt;</button>
+            <div class="carousel-images">
+                <img src="assets/images/gallery1/1.jpg" alt="Nature 1">
+                <img src="assets/images/gallery1/2.jpg" alt="Nature 2">
+                <img src="assets/images/gallery1/3.jpg" alt="Nature 3">
+                <img src="assets/images/gallery1/4.jpg" alt="Nature 4">
+            </div>
+            <button class="carousel-btn next" aria-label="Next">&gt;</button>
+        </div>
+
+        <h2>Глупофчина</h2>
+        <div class="carousel" id="gallery2">
+            <button class="carousel-btn prev" aria-label="Previous">&lt;</button>
+            <div class="carousel-images">
+                <img src="assets/images/gallery2/1.jpg" alt="Action 1">
+                <img src="assets/images/gallery2/2.jpg" alt="Action 2">
+                <img src="assets/images/gallery2/3.jpg" alt="Action 3">
+                <img src="assets/images/gallery2/4.jpg" alt="Action 4">
+            </div>
+            <button class="carousel-btn next" aria-label="Next">&gt;</button>
+        </div>
+    </section>
 </main>
 
 <footer>
-    <p>&copy; 2024 СКК Златоврв</p>
+    <p>&copy; 2024 SCC Zlatovrv</p>
 </footer>
 
 <script>
+    // Carousel functionality
+    document.querySelectorAll('.carousel').forEach(carousel => {
+    const imagesWrapper = carousel.querySelector('.carousel-images');
+    const images = Array.from(imagesWrapper.children);
+    const prevBtn = carousel.querySelector('.prev');
+    const nextBtn = carousel.querySelector('.next');
+    let currentIndex = 0;
+
+    const updateCarousel = () => {
+        const carouselWidth = carousel.clientWidth;
+        const imageWidth = images[0].clientWidth;
+        const offset = (carouselWidth - imageWidth) / 2;
+
+        imagesWrapper.style.transform = `translateX(${offset - currentIndex * (imageWidth + 10)}px)`;
+
+        images.forEach((img, index) => {
+            img.classList.toggle('active', index === currentIndex);
+        });
+    };
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+
+    updateCarousel();
+});
+
+
+    // Menu toggle
     document.querySelector('.menu-toggle').addEventListener('click', function () {
         const menu = document.querySelector('.menu');
         menu.classList.toggle('open');
