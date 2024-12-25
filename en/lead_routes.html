@@ -1,48 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Насоки</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-    <div class="logo">SCC Zlatovrv</div>
+    <div class="logo">СКК Златоврв</div>
     <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
+		<li><a href="activities.html">Activities</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="routes.html">Routes</a></li>
+        <li class="has-submenu">
+            <span>Routes</span>
+            <ul class="submenu">
+                <li><a href="lead_routes.html">Lead</a></li>
+                <li><a href="boulder_routes.html">Boulder</a></li>
+            </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="language"><a href="../mk/routes.html">MK</a></li>
+        <li class="language"><a href="../mk/lead_routes.html">MK</a></li>
     </ul>
 </nav>
 
 <main>
     <h1>Routes</h1>
     <section id="routes">
-        <h2>Our routes</h2>
+        <h2>Lead Routes</h2>
         <div class="route">
-            <img src="assets/images/img3.jpg" alt="Route 1">
+            <img src="../data/routes/1.jpg" alt="Route 1">
             <div class="route-info">
-                <p><strong>Name:</strong> Route 1</p>
+                <p><strong>Name:</strong> Lead route 1</p>
                 <p><strong>Grade:</strong> 4a</p>
                 <p><strong>First Ascent:</strong> 1987</p>
             </div>
         </div>
         <div class="route">
-            <img src="assets/images/img4.jpg" alt="Route 2">
+            <img src="../data/routes/2.jpg" alt="Route 2">
             <div class="route-info">
-                <p><strong>Name:</strong> Route 2</p>
+                <p><strong>Name:</strong> Lead route 2</p>
                 <p><strong>Grade:</strong> 6a</p>
                 <p><strong>First Ascent:</strong> 1989</p>
             </div>
         </div>
     </section>
 </main>
+
+<div class="button-container">
+    <a href="../en/boulder_routes.html" class="nav-button">To Boulder Routes</a>
+</div>
 
 <footer>
     <p>&copy; 2024 SCC Zlatovrv</p>

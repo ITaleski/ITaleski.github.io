@@ -60,6 +60,27 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Стили за ставката без линк */
+nav ul li.has-submenu > span {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer; /* Покажувачот ќе биде како за линк */
+    transition: background-color 0.3s;
+}
+
+nav ul li.has-submenu > span:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Прикажи го подмениото кога глувчето е над ставката */
+nav ul li.has-submenu:hover .submenu {
+    display: block;
+}
+
+
 /* Language Link (MK) */
 nav ul li.language {
     margin-left: 50px;
@@ -76,6 +97,50 @@ nav ul li.language a {
 nav ul li.language a:hover {
     background-color: #45a049;
 }
+
+/* Стили за подменијата */
+nav ul li.has-submenu {
+    position: relative;
+}
+
+nav ul li .submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none; /* Скриј го подмениото по дифолт */
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+nav ul li .submenu li {
+    margin: 0;
+}
+
+nav ul li .submenu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    white-space: nowrap; /* Спречи прекршување на текстот */
+    transition: background-color 0.3s;
+}
+
+nav ul li .submenu li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Прикажи го подмениото кога глувчето е над родителската ставка */
+nav ul li.has-submenu:hover .submenu {
+    display: block;
+}
+
 
 /* Mobile Menu */
 .menu-toggle {
@@ -149,6 +214,29 @@ main {
 section {
     margin-bottom: 20px;
 }
+
+/* Контейнер за копчето */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Простор над и под копчето */
+}
+
+/* Стилови за копчето */
+.nav-button {
+    background-color: #333; /* Иста боја како навигациското мени */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #575757; /* Боја при hover, иста како во менито */
+}
+
 
 /* Footer */
 footer {
