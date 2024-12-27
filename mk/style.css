@@ -208,12 +208,63 @@ nav ul.menu {
 
 /* Main Content */
 main {
-    padding: 20px;
+    padding: 0px;
 }
 
 section {
     margin-bottom: 20px;
 }
+
+/* Styling for the main block */
+.block {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 8px;
+    color: #333;
+}
+
+/* Gradient background */
+.gradient-background {
+    background: linear-gradient(white, #b2ff59); /* Adjust the green shade as desired */
+    color: #333;
+}
+
+/* White background */
+.white-background {
+    background: white;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+/* Left and right sections */
+.left-content,
+.right-content {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Centering the heading in the left section */
+.left-content h3 {
+    text-align: center;
+    margin-bottom: 20px; /* Space between heading and list */
+}
+
+/* Styling the list in the left section */
+.left-content ul {
+    list-style-type: disc; /* Bullet points as circles */
+    list-style-position: inside; /* Bullets inside the element */
+    padding-left: 20px; /* Indentation for the list */
+    margin: 0; /* Remove default margins */
+}
+
+/* Styling list items */
+.left-content li {
+    color: #4b0082; /* Purple color for text */
+    margin-bottom: 10px; /* Space between items */
+}
+
+
 
 /* Контейнер за копчето */
 .button-container {
