@@ -175,18 +175,42 @@ nav ul.menu {
     nav ul li {
         margin-left: 0;
         margin-bottom: 10px;
-        text-align: center;
+        text-align: right; /* Align menu items to the left */
+        padding-left: 0px; /* Add padding for better visibility */
     }
 
-    nav ul li a {
-        padding: 10px 0;
-        width: 100%;
+    nav ul li.has-submenu {
+        position: right-content /* Allow submenu to appear below the parent */
+    }
+
+    nav ul li.has-submenu .submenu {
+        display: none; /* Initially hide the submenu */
+        background-color: #444; /* Distinct background for submenus */
+        padding-left: 20px; /* Indent submenu items */
+    }
+
+    nav ul li.has-submenu.open .submenu {
+        display: block; /* Display the submenu when the parent is active */
+    }
+
+    nav ul li.has-submenu > span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    nav ul li.has-submenu > span:after {
+        content: "▼"; /* Add an arrow indicator for submenus */
+        font-size: 12px;
+        margin-left: 8px;
     }
 
     .menu-toggle {
         display: block;
     }
 }
+
 
 /* Hero Image */
 .hero-image {
