@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: PlayfairDisplay-SemiBoldItalic;
-    src: url(../data/fonts/PlayfairDisplay-SemiBoldItalic.otf) format('truetype'); /* Патека до фонтот */
+    src: url(../data/fonts/PlayfairDisplay-SemiBoldItalic.ttf) format('truetype'); /* Патека до фонтот */
     font-weight: normal;
     font-style: normal;
 }
@@ -290,24 +290,95 @@ main {
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 /* Styling for the main block */
 .block {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    padding: 0px;
     border-radius: 8px;
     color: #333;
 }
 
-/* White background */
-.white-background {
-    background: white;
-    color: #333;
+.break-text {
+    font-family: Actay-Regular;
+    text-align: center;
+    font-size: 35px; /* Големина на фонтот */
+    padding: 10px 0px; /* Простор околу текстот */
 }
 
+
+/* White background */
+.white-background {
+	display: flex; /* Користиме flex за лесно подредување */
+    justify-content: center; /* Центрирање на сите елементи */
+    align-items: center; /* Вертикално центрирање */
+    background-color: white; /* Белата позадина */
+    padding: 0px; /* Простор околу */
+    position: relative;
+    gap: 20px; /* Простор меѓу елементите */
+}
+
+/* Button styles */
+.na-button {
+    font-family: RobotoCondensed-Regular;
+    display: inline-block; /* Потребно за <a> да се однесува како копче */
+    background-color: white; /* Бела позадина */
+    color: black; /* Црни букви */
+    border: 2px solid black; /* Црна граница */
+    padding: 0px 0px;
+    border-radius: 5px;
+    text-decoration: none; /* Отстрани линија под текстот */
+    transition: all 0.3s; /* Ефект за преод */
+    cursor: pointer;
+    text-align: center;
+	width: 100px; /* Фиксна ширина за сите копчиња */
+}
+
+.na-button:hover {
+    background-color: black; /* Црна позадина при hover */
+    color: white; /* Бели букви при hover */
+    border-color: black; /* Задржува црна граница */
+}
+
+
+.button-left {
+    margin-right: 20px; /* Простор од стрелката */
+}
+
+.button-right {
+    margin-left: 20px; /* Простор од стрелката */
+}
+
+/* Arrow style */
+.arrow-down {
+    font-size: 60px; /* Големина на стрелката */
+    color: black; /* Боја на стрелката */
+    text-align: center; /* Центрирање на текстот */
+    /* Отстрани flex: 1; */
+}
+
+.the-text {
+	font-family: PlayfairDisplay-SemiBoldItalic;
+	line-height: 1.0; /* Простор помеѓу редовите */
+    text-align: center;
+    font-size: 130px; /* Големина на фонтот */
+    padding: 0px 0px; /* Простор околу текстот */
+}
+.text-line {
+    display: block; /* Прави секој дел да биде на посебен ред */
+    font-size: 100px; /* Големина на текстот */
+}
+.sub-text {
+    font-family: RobotoCondensed-Regular, sans-serif; /* Примена на RobotoCondensed */
+    text-align: center; /* Центрирање на текстот */
+    font-size: 18px; /* Големина на текстот */
+    line-height: 1.4; /* Простор меѓу редовите */
+    color: #333; /* Боја на текстот */
+    margin-top: 10px; /* Простор над под-текстот */
+}
 
 /* Контейнер за копчето */
 .button-container {

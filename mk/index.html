@@ -36,9 +36,50 @@
 </div>
 
 <main>
+    <div class="break-text">
+        BREAK FREE FROM
+    </div>
     <section class="white-background">
-      
+    <div class="button-left">
+        <a href="about.html" class="na-button">За нас</a>
+    </div>
+    <div class="arrow-down">
+        <span>&#8595;</span> <!-- Unicode за стрелка надолу -->
+    </div>
+    <div class="button-right">
+        <a href="activities.html" class="na-button">Активности</a>
+    </div>
     </section>
+    <div class="the-text">
+       <span class="text-line">The</span>
+       <span class="text-line">routine</span>
+    </div>
+    <div class="sub-text">
+        Eдуцирање во областа на спортско качување со лиценциран инструктор; 
+	    Редовни тренинзи во сала на вештачка карпа и совладување на техники и стилови на спортско качување на природна карпа; 
+	    Докажани успеси и остварени резултати преку посета и учество на домашни и странски натпревари; 
+	    Подигнување на свеста за придобивките од спортот и позитивниот импакт во секојдневниот живот;
+    </div>
+	<div class="carousel" id="gallery1">
+            <button class="carousel-btn prev" aria-label="Previous">&lt;</button>
+            <div class="carousel-images">
+                <img src="../data/home/2.jpg" alt="Nature 1">
+                <img src="../data/home/3.jpg" alt="Nature 2">
+                <img src="../data/home/5.jpg" alt="Nature 3">
+                <img src="../data/home/6.jpg" alt="Nature 4">
+				<img src="../data/home/7.jpg" alt="Nature 4">
+				<img src="../data/home/8.jpg" alt="Nature 4">
+            </div>
+            <button class="carousel-btn next" aria-label="Next">&gt;</button>
+        </div>
+    <div class="break-text">
+        FREEDOM
+    </div>
+	<div class="the-text">
+       in motion
+    </div>
+
+
 
 	<div class="button-container">
         <a href="../mk/contact.html" class="nav-button">Стани Член!</a>
@@ -63,6 +104,40 @@
         const menu = document.querySelector('.menu');
         menu.classList.toggle('open');
     });
+	
+	document.querySelectorAll('.carousel').forEach(carousel => {
+    const imagesWrapper = carousel.querySelector('.carousel-images');
+    const images = Array.from(imagesWrapper.children);
+    const prevBtn = carousel.querySelector('.prev');
+    const nextBtn = carousel.querySelector('.next');
+    let currentIndex = 0;
+
+    const updateCarousel = () => {
+        const carouselWidth = carousel.clientWidth;
+        const imageWidth = images[0].clientWidth;
+        const offset = (carouselWidth - imageWidth) / 2;
+
+        imagesWrapper.style.transform = `translateX(${offset - currentIndex * (imageWidth + 10)}px)`;
+
+        images.forEach((img, index) => {
+            img.classList.toggle('active', index === currentIndex);
+        });
+    };
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+
+    updateCarousel();
+});
 </script>
 
 </body>
