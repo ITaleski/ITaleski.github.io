@@ -1,3 +1,35 @@
+
+@font-face {
+    font-family: Actay-Regular;
+    src: url(../data/fonts/Actay-Regular.otf) format('truetype'); /* Патека до фонтот */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: ActayWide-Bold;
+    src: url(../data/fonts/ActayWide-Bold.otf) format('truetype'); /* Патека до фонтот */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: PlayfairDisplay-SemiBoldItalic;
+    src: url(../data/fonts/PlayfairDisplay-SemiBoldItalic.otf) format('truetype'); /* Патека до фонтот */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoCondensed-Regular;
+    src: url(../data/fonts/RobotoCondensed-Regular.ttf) format('truetype'); /* Патека до фонтот */
+}
+
+@font-face {
+    font-family: RobotoCondensed;
+    src: url(../data/fonts/RobotoCondensed.ttf) format('truetype'); /* Патека до фонтот */
+}
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -48,7 +80,7 @@ nav ul li {
 }
 
 nav ul li a {
-	font-family: Roboto Condensed;
+	font-family: RobotoCondensed-Regular;
     color: black;
     text-decoration: none;
     font-weight: regular;
@@ -57,13 +89,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: #45a049;
     border-radius: 5px;
 }
 
 /* Стили за ставката без линк */
 nav ul li.has-submenu > span {
-    font-family: Roboto Condensed;
+    font-family: RobotoCondensed-Regular;
     color: black;
     text-decoration: none;
     font-weight: regular;
@@ -73,7 +105,7 @@ nav ul li.has-submenu > span {
 }
 
 nav ul li.has-submenu > span:hover {
-    background-color: #575757;
+    background-color: #45a049;
     border-radius: 5px;
 }
 
@@ -89,7 +121,7 @@ nav ul li.language {
 }
 
 nav ul li.language a {
-	font-family: Roboto Condensed;
+	font-family: RobotoCondensed-Regular;
     color: black;
     font-weight: regular;
     background-color: white;
@@ -126,7 +158,7 @@ nav ul li .submenu li {
 }
 
 nav ul li .submenu li a {
-	font-family: Roboto Condensed;
+	font-family: RobotoCondensed-Regular;
     color: black;
     text-decoration: none;
     font-weight: regular;
@@ -218,8 +250,9 @@ nav ul.menu {
 
 /* Hero Image */
 .hero-image {
-    width: auto;
-    height: 100%;
+    position: relative; /* Потребно за правилно поставување на апсолутниот текст */
+    width: 100%;
+    height: auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -233,6 +266,23 @@ nav ul.menu {
     object-fit: cover;
     object-position: center;
 }
+
+.hero-text {
+	font-family: ActayWide-Bold;
+    position: absolute;
+    bottom: 0; /* Го поставува текстот точно на дното */
+    left: 0;
+    width: 100%; /* Целиот текст ќе биде поставен преку целата ширина */
+    text-align: center; /* Центрирање на текстот */
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6); /* Темна полупроѕирна позадина */
+    padding: 10px; /* Простор околу текстот */
+    box-sizing: border-box; /* За правилно пресметување на ширината */
+}
+
+
 
 /* Main Content */
 main {
@@ -269,7 +319,7 @@ section {
 
 /* Стилови за копчето */
 .nav-button {
-	font-family: Roboto Condensed;
+	font-family: RobotoCondensed-Regular;
 	width: 100%;
 	text-align: center;
     background-color: black;
