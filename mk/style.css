@@ -89,7 +89,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #45a049;
+    background-color: #575757;
     border-radius: 5px;
 }
 
@@ -105,7 +105,7 @@ nav ul li.has-submenu > span {
 }
 
 nav ul li.has-submenu > span:hover {
-    background-color: #45a049;
+    background-color: #575757;
     border-radius: 5px;
 }
 
@@ -131,7 +131,7 @@ nav ul li.language a {
 }
 
 nav ul li.language a:hover {
-    background-color: #45a049;
+    background-color: #575757;
 }
 
 /* Стили за подменијата */
