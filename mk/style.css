@@ -32,7 +32,7 @@
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: RobotoCondensed-Regular, sans-serif;, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -567,11 +567,13 @@ form button:hover {
 }
 
 #routes h2 {
+	font-family: RobotoCondensed-Regular, sans-serif;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .route {
+	font-family: RobotoCondensed-Regular, sans-serif;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -590,6 +592,7 @@ form button:hover {
 }
 
 .route-info {
+	font-family: RobotoCondensed-Regular, sans-serif;
     flex: 1;
     font-size: 16px;
     line-height: 1.8;
