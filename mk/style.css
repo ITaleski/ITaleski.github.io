@@ -424,10 +424,11 @@ section {
 }
 
 .event-right img {
-  
-  max-width:100%;
-  height: auto;
-  object-fit: cover;
+  max-width: 700px; /* Максимална ширина */
+  max-height: 500px; /* Максимална висина */
+  width: 100%; /* Приспособи ширината */
+  height: auto; /* Пропорционална висина */
+  object-fit: cover; /* Зачувај пропорции */
 }
 
 .event-arrow {
