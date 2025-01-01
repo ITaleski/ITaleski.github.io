@@ -1,6 +1,38 @@
+
+@font-face {
+    font-family: Actay-Regular;
+    src: url(../data/fonts/Actay-Regular.otf) format('truetype'); /* Патека до фонтот */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: ActayWide-Bold;
+    src: url(../data/fonts/ActayWide-Bold.otf) format('truetype'); /* Патека до фонтот */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: PlayfairDisplay-SemiBoldItalic;
+    src: url(../data/fonts/PlayfairDisplay-SemiBoldItalic.ttf) format('truetype'); /* Патека до фонтот */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoCondensed-Regular;
+    src: url(../data/fonts/RobotoCondensed-Regular.ttf) format('truetype'); /* Патека до фонтот */
+}
+
+@font-face {
+    font-family: RobotoCondensed;
+    src: url(../data/fonts/RobotoCondensed.ttf) format('truetype'); /* Патека до фонтот */
+}
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: RobotoCondensed-Regular, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -15,15 +47,15 @@ body {
 }
 
 .logo img {
-    max-width: 100px;
+    max-width: 150px;
     height: auto;
     display: block;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
-    padding: 10px 20px;
+    background-color: white;
+    padding: 20px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
@@ -48,30 +80,34 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+	font-family: RobotoCondensed-Regular;
+    color: black;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: regular;
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: black;
+	color: white;
     border-radius: 5px;
 }
 
 /* Стили за ставката без линк */
 nav ul li.has-submenu > span {
-    color: white;
+    font-family: RobotoCondensed-Regular;
+    color: black;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: regular;
     padding: 5px 10px;
     cursor: pointer; /* Покажувачот ќе биде како за линк */
     transition: background-color 0.3s;
 }
 
 nav ul li.has-submenu > span:hover {
-    background-color: #575757;
+    background-color: black;
+	color: white;
     border-radius: 5px;
 }
 
@@ -87,15 +123,18 @@ nav ul li.language {
 }
 
 nav ul li.language a {
-    background-color: #4CAF50;
-    color: white;
+	font-family: RobotoCondensed-Regular;
+    color: black;
+    font-weight: regular;
+    background-color: white;
     padding: 5px 15px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 nav ul li.language a:hover {
-    background-color: #45a049;
+    background-color: black;
+	color: white;
 }
 
 /* Стили за подменијата */
@@ -111,7 +150,7 @@ nav ul li .submenu {
     top: 100%;
     left: 0;
     display: none; /* Скриј го подмениото по дифолт */
-    background-color: #333;
+    background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     z-index: 10;
@@ -122,9 +161,10 @@ nav ul li .submenu li {
 }
 
 nav ul li .submenu li a {
-    color: white;
+	font-family: RobotoCondensed-Regular;
+    color: black;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: regular;
     padding: 10px 15px;
     display: block;
     white-space: nowrap; /* Спречи прекршување на текстот */
@@ -132,7 +172,8 @@ nav ul li .submenu li a {
 }
 
 nav ul li .submenu li a:hover {
-    background-color: #575757;
+    background-color: black;
+	color: white;
     border-radius: 5px;
 }
 
@@ -147,7 +188,7 @@ nav ul li.has-submenu:hover .submenu {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: black;
     font-size: 24px;
     cursor: pointer;
 }
@@ -160,7 +201,7 @@ nav ul.menu {
     nav ul.menu {
         display: none;
         flex-direction: column;
-        background-color: #333;
+        background-color: white;
         position: absolute;
         top: 60px;
         left: 0;
@@ -185,7 +226,7 @@ nav ul.menu {
 
     nav ul li.has-submenu .submenu {
         display: none; /* Initially hide the submenu */
-        background-color: #444; /* Distinct background for submenus */
+        background-color: white; /* Distinct background for submenus */
         padding-left: 20px; /* Indent submenu items */
     }
 
@@ -211,11 +252,11 @@ nav ul.menu {
     }
 }
 
-
 /* Hero Image */
 .hero-image {
+    position: relative; /* Потребно за правилно поставување на апсолутниот текст */
     width: 100%;
-    height: 400px;
+    height: auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -230,95 +271,313 @@ nav ul.menu {
     object-position: center;
 }
 
-/* Main Content */
-main {
-    padding: 0px;
+.hero-text {
+	font-family: ActayWide-Bold;
+    position: absolute;
+    bottom: 0; /* Го поставува текстот точно на дното */
+    left: 0;
+    width: 100%; /* Целиот текст ќе биде поставен преку целата ширина */
+    text-align: center; /* Центрирање на текстот */
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6); /* Темна полупроѕирна позадина */
+    padding: 10px; /* Простор околу текстот */
+    box-sizing: border-box; /* За правилно пресметување на ширината */
 }
 
+
+
+/* Main Content */
+main {
+  margin: 0 auto; /* Центрирање на главниот прозорец */
+  padding: 0px; /* Простор внатре во главниот прозорец */
+  max-width: 1100px; /* Ограничување на ширината на главниот прозорец */
+  background-color: #f4f4f4; /* Сивкаста позадина */
+  border-radius: 8px; /* Заоблени агли */
+  min-height: calc(100vh - 60px); /* Минимална висина за да стигне до футерот */
+}
+
+
+/* Info Section Styles */
+.info-section {
+  background-color: #f4f4f4; /* Бела позадина */
+  border-radius: 0px; /* Заоблени агли */
+  padding: 20px; /* Простор околу текстот */
+  margin: 20px auto; /* Простор околу секцијата и центрирање */
+  max-width: 1000px; /* Ограничена ширина */
+}
+
+.sub-text {
+  font-family: RobotoCondensed-Regular, sans-serif; /* Фонт */
+  font-size: 16px; /* Големина на текстот */
+  line-height: 1.6; /* Простор меѓу линиите */
+  color: #333; /* Боја на текстот */
+  text-align: left; /* Порамнување на текстот */
+}
+
+
+body {
+  background-color: #f4f4f4 /*#575757; /* Позадина надвор од главниот прозорец */
+}
+
+
 section {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Styling for the main block */
 .block {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    padding: 0px;
     border-radius: 8px;
     color: #333;
 }
 
-/* Gradient background */
-.gradient-background {
-    background: linear-gradient(white, #b2ff59); /* Adjust the green shade as desired */
-    color: #333;
+.break-text {
+    font-family: Actay-Regular;
+    text-align: center;
+    font-size: 35px; /* Големина на фонтот */
+    padding: 20px 0px; /* Простор околу текстот */
+	padding-bottom: 0px;
 }
+
 
 /* White background */
 .white-background {
-    background: white;
-    color: #333;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+	display: flex; /* Користиме flex за лесно подредување */
+    justify-content: center; /* Центрирање на сите елементи */
+    align-items: center; /* Вертикално центрирање */
+    background-color: #f4f4f4; /* Белата позадина */
+    padding: 0px; /* Простор околу */
+    position: relative;
+    gap: 5px; /* Простор меѓу елементите */
+	border-radius: 0px; /* Заоблени агли */
+	max-width: 800px;
+	margin: 20px auto;
 }
-
-/* Left and right sections */
-.left-content,
-.right-content {
-    flex: 1;
-    padding: 10px;
-}
-
-/* Centering the heading in the left section */
-.left-content h3 {
+		
+		
+/* Button styles */
+.na-button {
+    font-family: RobotoCondensed-Regular;
+    display: inline-block; /* Потребно за <a> да се однесува како копче */
+    background-color: black; /* Бела позадина */
+    color: white; /* Црни букви */
+    border: 2px solid black; /* Црна граница */
+    padding: 5px 5px;
+    border-radius: 8px;
+    text-decoration: none; /* Отстрани линија под текстот */
+    transition: all 0.3s; /* Ефект за преод */
+    cursor: pointer;
     text-align: center;
-    margin-bottom: 20px; /* Space between heading and list */
+	width: 100px; /* Фиксна ширина за сите копчиња */
 }
 
-/* Styling the list in the left section */
-.left-content ul {
-    list-style-type: disc; /* Bullet points as circles */
-    list-style-position: inside; /* Bullets inside the element */
-    padding-left: 20px; /* Indentation for the list */
-    margin: 0; /* Remove default margins */
-}
-
-/* Styling list items */
-.left-content li {
-    color: #4b0082; /* Purple color for text */
-    margin-bottom: 10px; /* Space between items */
+.na-button:hover {
+    background-color: white; /* Црна позадина при hover */
+    color: black; /* Бели букви при hover */
+    border-color: black; /* Задржува црна граница */
 }
 
 
-
-/* Контейнер за копчето */
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0; /* Простор над и под копчето */
+.button-left {
+    margin-right: 220px; /* Простор од стрелката */
 }
 
-/* Стилови за копчето */
-.nav-button {
-    background-color: #333; /* Иста боја како навигациското мени */
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.button-right {
+    margin-left: 220px; /* Простор од стрелката */
 }
 
-.nav-button:hover {
-    background-color: #575757; /* Боја при hover, иста како во менито */
+@media (max-width: 768px) {
+  .button-left {
+    margin-right: 50px; /* Простор од стрелката за помала резолуција */
+  }
+
+  .button-right {
+    margin-left: 50px; /* Простор од стрелката за помала резолуција */
+  }
 }
 
+/* Arrow style */
+.arrow-down {
+    font-size: 60px; /* Големина на стрелката */
+    color: black; /* Боја на стрелката */
+    text-align: center; /* Центрирање на текстот */
+    /* Отстрани flex: 1; */
+}
+
+.the-text {
+	font-family: PlayfairDisplay-SemiBoldItalic;
+	line-height: 1.0; /* Простор помеѓу редовите */
+    text-align: center;
+    font-size: 130px; /* Големина на фонтот */
+    padding: 0px 0px; /* Простор околу текстот */
+}
+.text-line {
+    display: block; /* Прави секој дел да биде на посебен ред */
+    font-size: 130px; /* Големина на текстот */
+}
+.sub-text {
+    font-family: RobotoCondensed-Regular, sans-serif; /* Примена на RobotoCondensed */
+    text-align: center; /* Центрирање на текстот */
+    font-size: 18px; /* Големина на текстот */
+    line-height: 1.4; /* Простор меѓу редовите */
+    color: #333; /* Боја на текстот */
+    margin-top: 10px; /* Простор над под-текстот */
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Gray Background Section */
+.gray-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4; /* Сива позадина */
+  padding: 20px 0; /* Простор горе и долу */
+  position: relative; /* За позиционирање на стрелките */
+  margin-top: 35px;
+  margin-bottom:35px;
+}
+
+/* Arrow Styles */
+.arrow {
+  font-size: 60px; /* Големина на стрелките */
+  color: black; /* Црна боја на стрелките */
+}
+
+.arrow-left, .arrow-right {
+  position: absolute; /* За фиксирање на позицијата */
+  top: 50%; /* Центрирај вертикално */
+  transform: translateY(-50%); /* Подеси вертикално центрирање */
+}
+
+.arrow-left {
+  left: calc(50% - 300px); /* Позиција 220px од центарот */
+}
+
+.arrow-right {
+  right: calc(50% - 300px); /* Позиција 220px од центарот */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .arrow-left {
+    left: calc(50% - 100px); /* Позиција 50px од центарот за помали екрани */
+  }
+
+  .arrow-right {
+    right: calc(50% - 100px); /* Позиција 50px од центарот за помали екрани */
+  }
+}
+
+/* Highlight Section Styles */
+.highlight-section {
+  background-color: #f4f4f4; /* Позадина на секцијата */
+  padding: 0px 0px; /* Простор околу */
+  border-radius: 0px; /* Заоблени агли */
+  margin: 20px auto; /* Простор горе и долу и центрирање */
+  max-width: 1000px; /* Максимална ширина на секцијата */
+}
+
+.highlight-wrapper {
+  display: flex;
+  gap: 20px; /* Простор меѓу левата и десната секција */
+  align-items: flex-start; /* Вертикално почетно порамнување */
+  justify-content: space-between; /* Лева и десна страна */
+}
+
+.highlight-left {
+  flex: 1; /* Лева страна зафаќа половина од просторот */
+  display: flex;
+  flex-direction: column; /* Постави полињата едно над друго */
+  gap: 20px; /* Простор меѓу полињата */
+}
+
+.highlight-box {
+  background-color: #4CAF50; /* Зеленкаста боја */
+  color: white; /* Бела боја на текстот */
+  padding: 28px; /* Простор внатре */
+  border-radius: 8px; /* Заоблени агли */
+  text-align: center; /* Централно порамнување на текстот */
+}
+
+.highlight-box h2 {
+  font-family: RobotoCondensed-Regular, sans-serif; /* Фонт за H2 */
+  font-size: 24px; /* Големина на H2 */
+  margin-bottom: 10px;
+}
+
+.highlight-box h3 {
+  font-family: RobotoCondensed-Regular, sans-serif; /* Фонт за H3 */
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.highlight-box a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.highlight-box a:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+.highlight-right {
+  flex: 1; /* Десна страна зафаќа половина од просторот */
+  background-color: white; /* Светло зелена позадина */
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.highlight-right img {
+  max-width: 100%; /* Приспособи ја сликата */
+  height: auto; /* Пропорционална висина */
+  border-radius: 8px; /* Заоблени агли */
+}
+
+@media (max-width: 768px) {
+  .highlight-wrapper {
+    flex-direction: column; /* Претвори во вертикален приказ */
+    align-items: center; /* Центрирај ја содржината хоризонтално */
+  }
+
+  .highlight-left, .highlight-right {
+    max-width: 100%; /* Целосна ширина */
+    text-align: center; /* Центрирање на текстот */
+  }
+
+  .highlight-left {
+    align-items: center; /* Центрирање на квадратите хоризонтално */
+  }
+
+  .highlight-box {
+    width: 90%; /* Ограничување на ширината на секое зелено поле */
+  }
+
+  .highlight-right img {
+    max-width: 90%; /* Ограничување на ширината на сликата */
+    margin-top: 20px; /* Простор над сликата */
+  }
+}
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px; /* Простор над футерот */
 }
 
 /* Contact Section */
@@ -409,11 +668,13 @@ form button:hover {
 }
 
 #routes h2 {
+	font-family: RobotoCondensed-Regular, sans-serif;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .route {
+	font-family: RobotoCondensed-Regular, sans-serif;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -432,6 +693,7 @@ form button:hover {
 }
 
 .route-info {
+	font-family: RobotoCondensed-Regular, sans-serif;
     flex: 1;
     font-size: 16px;
     line-height: 1.8;
@@ -446,15 +708,24 @@ form button:hover {
     color: #4CAF50;
 }
 
-/* Carousel Container */
-.carousel {
-    position: relative;
-    overflow: hidden;
-    margin: 20px auto;
-    width: 80%; /* Adjust width to control the amount of adjacent images shown */
+.carousel-section {
+  background-color: white; /* Бела позадина */
+  border-radius: 8px; /* Заоблени рабови */
+  padding: 20px; /* Простор внатре во секцијата */
+  margin: 10px auto; /* Простор над и под секцијата */
+  max-width: 1000px; /* Ограничување на ширината на секцијата */
 }
 
-/* Carousel Images Wrapper */
+/* Carousel Container */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Carousel ImageWrapper */
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -464,10 +735,10 @@ form button:hover {
 .carousel-images img {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 50%; /* Ensure images don't exceed their container */
+    max-width: 100%; /* Ensure images don't exceed their container */
     height: auto;
-	max-height: 500px; /* Додава максимална висина за сликите */
-    object-fit: scale-down;
+	max-height: 700px; /* Додава максимална висина за сликите */
+    object-fit: contain;
     border-radius: 8px;
     margin: 0 15px; /* Space between images */
     transition: transform 0.3s, opacity 0.3s;
@@ -476,7 +747,7 @@ form button:hover {
 
 /* Active Image */
 .carousel-images img.active {
-    transform: scale(1.1); /* Slightly enlarge the active image */
+    transform: scale(1.4); /* Slightly enlarge the active image */
     opacity: 1;
 }
 

@@ -32,7 +32,7 @@
 
 /* General Styles */
 body {
-    font-family: RobotoCondensed-Regular, sans-serif;, sans-serif;
+    font-family: RobotoCondensed-Regular, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -305,7 +305,7 @@ main {
   border-radius: 0px; /* Заоблени агли */
   padding: 20px; /* Простор околу текстот */
   margin: 20px auto; /* Простор околу секцијата и центрирање */
-  max-width: 800px; /* Ограничена ширина */
+  max-width: 1000px; /* Ограничена ширина */
 }
 
 .sub-text {
@@ -366,8 +366,8 @@ section {
     background-color: black; /* Бела позадина */
     color: white; /* Црни букви */
     border: 2px solid black; /* Црна граница */
-    padding: 0px 0px;
-    border-radius: 5px;
+    padding: 5px 5px;
+    border-radius: 8px;
     text-decoration: none; /* Отстрани линија под текстот */
     transition: all 0.3s; /* Ефект за преод */
     cursor: pointer;
@@ -388,6 +388,16 @@ section {
 
 .button-right {
     margin-left: 220px; /* Простор од стрелката */
+}
+
+@media (max-width: 768px) {
+  .button-left {
+    margin-right: 50px; /* Простор од стрелката за помала резолуција */
+  }
+
+  .button-right {
+    margin-left: 50px; /* Простор од стрелката за помала резолуција */
+  }
 }
 
 /* Arrow style */
@@ -421,14 +431,56 @@ section {
 	padding-right: 10px;
 }
 
+/* Gray Background Section */
+.gray-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4; /* Сива позадина */
+  padding: 20px 0; /* Простор горе и долу */
+  position: relative; /* За позиционирање на стрелките */
+  margin-top: 35px;
+  margin-bottom:35px;
+}
+
+/* Arrow Styles */
+.arrow {
+  font-size: 60px; /* Големина на стрелките */
+  color: black; /* Црна боја на стрелките */
+}
+
+.arrow-left, .arrow-right {
+  position: absolute; /* За фиксирање на позицијата */
+  top: 50%; /* Центрирај вертикално */
+  transform: translateY(-50%); /* Подеси вертикално центрирање */
+}
+
+.arrow-left {
+  left: calc(50% - 300px); /* Позиција 220px од центарот */
+}
+
+.arrow-right {
+  right: calc(50% - 300px); /* Позиција 220px од центарот */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .arrow-left {
+    left: calc(50% - 100px); /* Позиција 50px од центарот за помали екрани */
+  }
+
+  .arrow-right {
+    right: calc(50% - 100px); /* Позиција 50px од центарот за помали екрани */
+  }
+}
 
 /* Highlight Section Styles */
 .highlight-section {
   background-color: #f4f4f4; /* Позадина на секцијата */
-  padding: 40px 20px; /* Простор околу */
+  padding: 0px 0px; /* Простор околу */
   border-radius: 0px; /* Заоблени агли */
   margin: 20px auto; /* Простор горе и долу и центрирање */
-  max-width: 1200px; /* Максимална ширина на секцијата */
+  max-width: 1000px; /* Максимална ширина на секцијата */
 }
 
 .highlight-wrapper {
@@ -448,7 +500,7 @@ section {
 .highlight-box {
   background-color: #4CAF50; /* Зеленкаста боја */
   color: white; /* Бела боја на текстот */
-  padding: 20px; /* Простор внатре */
+  padding: 28px; /* Простор внатре */
   border-radius: 8px; /* Заоблени агли */
   text-align: center; /* Централно порамнување на текстот */
 }
@@ -471,7 +523,7 @@ section {
   border: 2px solid white;
   color: white;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -482,7 +534,7 @@ section {
 
 .highlight-right {
   flex: 1; /* Десна страна зафаќа половина од просторот */
-  background-color: #4CAF50; /* Светло зелена позадина */
+  background-color: white; /* Светло зелена позадина */
   padding: 10px;
   border-radius: 8px;
   text-align: center;
@@ -518,73 +570,6 @@ section {
     margin-top: 20px; /* Простор над сликата */
   }
 }
-
-
-
-.event-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1000px; /* Максимална ширина */
-  margin: 0 0;
-  gap: 0px;
-}
-
-.event-left {
-  flex: 1; /* Приближно 50% */
-}
-
-.event-right {
-  flex: 1; /* Приближно 50% */
-}
-
-.event-right img {
-  max-width: 900px; /* Максимална ширина */
-  max-height: 800px; /* Максимална висина */
-  width: 100%; /* Приспособи ширината */
-  height: auto; /* Пропорционална висина */
-  object-fit: cover; /* Зачувај пропорции */
-}
-
-.event-arrow {
-  display: inline-block;
-  font-size: 2rem;
-  transform: scaleX(3);
-  padding-left: 20px;
-}
-
-.event-left h2 {
-  font-family: Actay-Regular, serif; /* Фонт за H2 */
-  font-size: 2rem;
-  color:black;
-  margin-bottom: 2px;
-}
-
-.event-left h3 {
-  font-family: Actay-Regular, sans-serif; /* Фонт за H3 */
-  font-size: 1.5rem;
-  margin-bottom: 2px;
-  color: black;
-}
-
-.outline-button {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #000;
-  color: #000;
-  text-decoration: none;
-  border-radius: 4px;
-  font-family: RobotoCondensed-Regular, sans-serif; /* Фонт за копчето */
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.outline-button:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-
-
 
 /* Footer */
 footer {
@@ -750,10 +735,10 @@ form button:hover {
 .carousel-images img {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 50%; /* Ensure images don't exceed their container */
+    max-width: 100%; /* Ensure images don't exceed their container */
     height: auto;
-	max-height: 500px; /* Додава максимална висина за сликите */
-    object-fit: scale-down;
+	max-height: 700px; /* Додава максимална висина за сликите */
+    object-fit: contain;
     border-radius: 8px;
     margin: 0 15px; /* Space between images */
     transition: transform 0.3s, opacity 0.3s;
