@@ -407,7 +407,7 @@ section {
 }
 .text-line {
     display: block; /* Прави секој дел да биде на посебен ред */
-    font-size: 100px; /* Големина на текстот */
+    font-size: 130px; /* Големина на текстот */
 }
 .sub-text {
     font-family: RobotoCondensed-Regular, sans-serif; /* Примена на RobotoCondensed */
