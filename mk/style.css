@@ -89,7 +89,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: black;
+	color: white;
     border-radius: 5px;
 }
 
@@ -105,7 +106,8 @@ nav ul li.has-submenu > span {
 }
 
 nav ul li.has-submenu > span:hover {
-    background-color: #575757;
+    background-color: black;
+	color: white;
     border-radius: 5px;
 }
 
@@ -131,7 +133,8 @@ nav ul li.language a {
 }
 
 nav ul li.language a:hover {
-    background-color: #575757;
+    background-color: black;
+	color: white;
 }
 
 /* Стили за подменијата */
@@ -169,7 +172,8 @@ nav ul li .submenu li a {
 }
 
 nav ul li .submenu li a:hover {
-    background-color: #575757;
+    background-color: black;
+	color: white;
     border-radius: 5px;
 }
 
@@ -290,7 +294,6 @@ main {
   padding: 0px; /* Простор внатре во главниот прозорец */
   max-width: 1100px; /* Ограничување на ширината на главниот прозорец */
   background-color: #f4f4f4; /* Сивкаста позадина */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Суптилна сенка */
   border-radius: 8px; /* Заоблени агли */
   min-height: calc(100vh - 60px); /* Минимална висина за да стигне до футерот */
 }
@@ -315,7 +318,7 @@ main {
 
 
 body {
-  background-color: #575757; /* Позадина надвор од главниот прозорец */
+  background-color: #f4f4f4 /*#575757; /* Позадина надвор од главниот прозорец */
 }
 
 
@@ -336,7 +339,7 @@ section {
     font-family: Actay-Regular;
     text-align: center;
     font-size: 35px; /* Големина на фонтот */
-    padding: 10px 0px; /* Простор околу текстот */
+    padding: 20px 0px; /* Простор околу текстот */
 	padding-bottom: 0px;
 }
 
@@ -360,8 +363,8 @@ section {
 .na-button {
     font-family: RobotoCondensed-Regular;
     display: inline-block; /* Потребно за <a> да се однесува како копче */
-    background-color: #f4f4f4; /* Бела позадина */
-    color: black; /* Црни букви */
+    background-color: black; /* Бела позадина */
+    color: white; /* Црни букви */
     border: 2px solid black; /* Црна граница */
     padding: 0px 0px;
     border-radius: 5px;
@@ -373,8 +376,8 @@ section {
 }
 
 .na-button:hover {
-    background-color: black; /* Црна позадина при hover */
-    color: white; /* Бели букви при hover */
+    background-color: white; /* Црна позадина при hover */
+    color: black; /* Бели букви при hover */
     border-color: black; /* Задржува црна граница */
 }
 
@@ -723,7 +726,6 @@ form button:hover {
 .carousel-section {
   background-color: white; /* Бела позадина */
   border-radius: 8px; /* Заоблени рабови */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Суптилна сенка */
   padding: 20px; /* Простор внатре во секцијата */
   margin: 10px auto; /* Простор над и под секцијата */
   max-width: 1000px; /* Ограничување на ширината на секцијата */
