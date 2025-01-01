@@ -747,7 +747,7 @@ form button:hover {
 
 /* Active Image */
 .carousel-images img.active {
-    transform: scale(1.4); /* Slightly enlarge the active image */
+    transform: scale(1.0); /* Slightly enlarge the active image */
     opacity: 1;
 }
 
