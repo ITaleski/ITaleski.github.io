@@ -298,9 +298,8 @@ main {
 
 /* Info Section Styles */
 .info-section {
-  background-color: white; /* Бела позадина */
-  border-radius: 8px; /* Заоблени агли */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Суптилна сенка */
+  background-color: #f4f4f4; /* Бела позадина */
+  border-radius: 0px; /* Заоблени агли */
   padding: 20px; /* Простор околу текстот */
   margin: 20px auto; /* Простор околу секцијата и центрирање */
   max-width: 800px; /* Ограничена ширина */
@@ -347,12 +346,11 @@ section {
 	display: flex; /* Користиме flex за лесно подредување */
     justify-content: center; /* Центрирање на сите елементи */
     align-items: center; /* Вертикално центрирање */
-    background-color: white; /* Белата позадина */
+    background-color: #f4f4f4; /* Белата позадина */
     padding: 0px; /* Простор околу */
     position: relative;
     gap: 5px; /* Простор меѓу елементите */
-	border-radius: 8px; /* Заоблени агли */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Суптилна сенка */
+	border-radius: 0px; /* Заоблени агли */
 	max-width: 800px;
 	margin: 20px auto;
 }
@@ -362,7 +360,7 @@ section {
 .na-button {
     font-family: RobotoCondensed-Regular;
     display: inline-block; /* Потребно за <a> да се однесува како копче */
-    background-color: white; /* Бела позадина */
+    background-color: #f4f4f4; /* Бела позадина */
     color: black; /* Црни букви */
     border: 2px solid black; /* Црна граница */
     padding: 0px 0px;
@@ -382,11 +380,11 @@ section {
 
 
 .button-left {
-    margin-right: 30px; /* Простор од стрелката */
+    margin-right: 220px; /* Простор од стрелката */
 }
 
 .button-right {
-    margin-left: 30px; /* Простор од стрелката */
+    margin-left: 220px; /* Простор од стрелката */
 }
 
 /* Arrow style */
@@ -423,10 +421,9 @@ section {
 
 /* Highlight Section Styles */
 .highlight-section {
-  background-color: white; /* Позадина на секцијата */
+  background-color: #f4f4f4; /* Позадина на секцијата */
   padding: 40px 20px; /* Простор околу */
-  border-radius: 8px; /* Заоблени агли */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Суптилна сенка */
+  border-radius: 0px; /* Заоблени агли */
   margin: 20px auto; /* Простор горе и долу и центрирање */
   max-width: 1200px; /* Максимална ширина на секцијата */
 }
