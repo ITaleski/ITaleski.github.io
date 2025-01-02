@@ -728,26 +728,27 @@ form button:hover {
 /* Carousel ImageWrapper */
 .carousel-images {
     display: flex;
+	gap: 20px;
     transition: transform 0.5s ease-in-out;
 }
 
 /* Individual Images */
 .carousel-images img {
     flex: 0 0 auto;
-    width: 100%;
+    width: auto;
     max-width: 100%; /* Ensure images don't exceed their container */
-    height: auto;
-	max-height: 700px; /* Додава максимална висина за сликите */
+    /*height: auto;*/
+	max-height: 540px; /* Додава максимална висина за сликите */
     object-fit: contain;
     border-radius: 8px;
-    margin: 0 15px; /* Space between images */
+    margin: 0; /* Space between images */
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0.4;
 }
 
 /* Active Image */
 .carousel-images img.active {
-    transform: scale(1.4); /* Slightly enlarge the active image */
+    transform: scale(1.0); /* Slightly enlarge the active image */
     opacity: 1;
 }
 
@@ -777,6 +778,7 @@ form button:hover {
 .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

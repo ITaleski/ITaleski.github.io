@@ -145,16 +145,19 @@
     let currentIndex = 0;
 
     const updateCarousel = () => {
-        const carouselWidth = carousel.clientWidth;
-        const imageWidth = images[0].clientWidth;
-        const offset = (carouselWidth - imageWidth) / 2;
+    const carouselWidth = carousel.clientWidth;
+    const imageWidth = images[0].clientWidth;
+    const gap = parseInt(window.getComputedStyle(imagesWrapper).gap) || 0; // Земете го gap од родителот
 
-        imagesWrapper.style.transform = `translateX(${offset - currentIndex * (imageWidth + 10)}px)`;
+    const offset = (carouselWidth - imageWidth) / 2; // Нема потреба од gap во offset
 
-        images.forEach((img, index) => {
-            img.classList.toggle('active', index === currentIndex);
-        });
-    };
+    imagesWrapper.style.transform = `translateX(${offset - currentIndex * (imageWidth + gap)}px)`;
+
+    images.forEach((img, index) => {
+        img.classList.toggle('active', index === currentIndex);
+    });
+};
+
 
     prevBtn.addEventListener('click', () => {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
