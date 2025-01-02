@@ -708,12 +708,13 @@ form button:hover {
     color: #4CAF50;
 }
 
+/* Carousel Section */
 .carousel-section {
-  background-color: white; /* Бела позадина */
-  border-radius: 8px; /* Заоблени рабови */
-  padding: 20px; /* Простор внатре во секцијата */
-  margin: 10px auto; /* Простор над и под секцијата */
-  max-width: 1000px; /* Ограничување на ширината на секцијата */
+    background-color: white; /* Бела позадина */
+    border-radius: 8px; /* Заоблени рабови */
+    padding: 20px; /* Простор внатре во секцијата */
+    margin: 10px auto; /* Простор над и под секцијата */
+    max-width: 1000px; /* Ограничување на ширината на секцијата */
 }
 
 /* Carousel Container */
@@ -728,28 +729,26 @@ form button:hover {
 /* Carousel ImageWrapper */
 .carousel-images {
     display: flex;
-	gap: 20px;
     transition: transform 0.5s ease-in-out;
+    gap: 10px; /* Простор меѓу сликите */
 }
 
 /* Individual Images */
 .carousel-images img {
     flex: 0 0 auto;
-    width: auto;
-    max-width: 100%; /* Ensure images don't exceed their container */
-    /*height: auto;*/
-	max-height: 540px; /* Додава максимална висина за сликите */
-    object-fit: contain;
+    width: 100%; /* Приспособи на ширината на екранот */
+    max-width: 100%; /* Ограничување на максималната ширина */
+    max-height: 540px; /* Ограничување на максималната висина */
+    object-fit: contain; /* Прикажи ги целосно сликите */
     border-radius: 8px;
-    margin: 0; /* Space between images */
     transition: transform 0.3s, opacity 0.3s;
-    opacity: 0.4;
+    opacity: 0.4; /* Затемнување за неактивните слики */
 }
 
 /* Active Image */
 .carousel-images img.active {
-    transform: scale(1.0); /* Slightly enlarge the active image */
-    opacity: 1;
+    transform: scale(1.0); /* Зголемување на активната слика */
+    opacity: 1; /* Целосна видливост */
 }
 
 /* Navigation Buttons */
@@ -779,15 +778,19 @@ form button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .carousel {
         width: 100%;
     }
 
+    .carousel-images {
+        gap: 5px; /* Намали го просторот меѓу сликите за помали уреди */
+    }
+
     .carousel-images img {
-        margin: 0 2px;
+        max-height: 300px; /* Намалување на висината за помали екрани */
+        object-fit: contain;
     }
 
     .carousel-btn {
