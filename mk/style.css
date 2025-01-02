@@ -286,6 +286,20 @@ nav ul.menu {
     box-sizing: border-box; /* За правилно пресметување на ширината */
 }
 
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 18px; /* Помала големина за таблети */
+        padding: 5px; /* Намалување на просторот околу текстот */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        font-size: 14px; /* Уште помала големина за мобилни уреди */
+        padding: 4px; /* Помал простор околу текстот */
+    }
+}
+
 
 
 /* Main Content */
@@ -756,7 +770,7 @@ form button:hover {
     background-color: white; /* Бела позадина */
     border-radius: 8px; /* Заоблени рабови */
     padding: 20px; /* Простор внатре во секцијата */
-    margin: 10px auto; /* Простор над и под секцијата */
+    margin: 30px 30px; /* Простор над и под секцијата */
     max-width: 1000px; /* Ограничување на ширината на секцијата */
 }
 
@@ -764,9 +778,8 @@ form button:hover {
     background-color: white; /* Иста позадина како carousel-section */
     border-radius: 8px; /* Заоблени рабови */
     padding: 20px; /* Простор околу видеото */
-    margin: 10px auto; /* Простор над и под секцијата */
+    margin: 60px 60px; /* Простор над и под секцијата */
     max-width: 1000px; /* Ограничена ширина */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Суптилна сенка */
 }
 
 .video-wrapper {

@@ -163,42 +163,42 @@
         menu.classList.toggle('open');
     });
 	
-	document.querySelectorAll('.carousel').forEach(carousel => {
-    const imagesWrapper = carousel.querySelector('.carousel-images');
-    const images = Array.from(imagesWrapper.children);
-    const prevBtn = carousel.querySelector('.prev');
-    const nextBtn = carousel.querySelector('.next');
-    let currentIndex = 0;
+	window.addEventListener('load', function () {
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const imagesWrapper = carousel.querySelector('.carousel-images');
+        const images = Array.from(imagesWrapper.children);
+        const prevBtn = carousel.querySelector('.prev');
+        const nextBtn = carousel.querySelector('.next');
+        let currentIndex = 0;
 
-    const updateCarousel = () => {
-    const carouselWidth = carousel.clientWidth;
-    const imageWidth = images[0].clientWidth;
-    const gap = parseInt(window.getComputedStyle(imagesWrapper).gap) || 0; // Земете го gap од родителот
+        const updateCarousel = () => {
+            const carouselWidth = carousel.clientWidth;
+            const imageWidth = images[0].clientWidth;
+            const offset = (carouselWidth - imageWidth) / 2;
 
-    const offset = (carouselWidth - imageWidth) / 2; // Нема потреба од gap во offset
+            imagesWrapper.style.transform = `translateX(${offset - currentIndex * (imageWidth + 10)}px)`;
 
-    imagesWrapper.style.transform = `translateX(${offset - currentIndex * (imageWidth + gap)}px)`;
+            images.forEach((img, index) => {
+                img.classList.toggle('active', index === currentIndex);
+            });
+        };
 
-    images.forEach((img, index) => {
-        img.classList.toggle('active', index === currentIndex);
-    });
-};
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            updateCarousel();
+        });
 
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        window.addEventListener('resize', updateCarousel);
+
         updateCarousel();
     });
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-        updateCarousel();
-    });
-
-    window.addEventListener('resize', updateCarousel);
-
-    updateCarousel();
 });
+
 </script>
 
 </body>
