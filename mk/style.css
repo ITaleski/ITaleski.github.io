@@ -590,11 +590,36 @@ footer {
 }
 
 .centenary-section h1 {
-    font-family: ActayRegular, sans-serif; /* Фонт */
+    font-family: Actay-Regular, sans-serif; /* Фонт */
     font-size: 2rem; /* Големина на текстот */
     color: #000; /* Црни букви */
     margin: 0; /* Отстранување на дополнителен маргин */
     line-height: 1.2; /* Простор меѓу линиите */
+}
+
+.membership-section {
+    background-color: #333; /* Темно сива позадина */
+    text-align: center; /* Централно порамнување на текстот */
+    padding: 20px 0; /* Простор горе и долу */
+    margin: 20px 0; /* Простор над и под секцијата */
+    border-radius: 8px; /* Заоблени рабови */
+}
+
+.membership-link {
+    font-family: Actay-Regular, sans-serif; /* Фонт */
+    font-size: 24px; /* Големина на текстот */
+    color: #fff; /* Бели букви */
+    text-decoration: none; /* Без подцртување */
+    background-color: transparent; /* Без позадина за линкот */
+    padding: 10px 20px; /* Простор околу текстот */
+    border: 2px solid #fff; /* Бела граница */
+    border-radius: 5px; /* Заоблени рабови на линкот */
+    transition: background-color 0.3s, color 0.3s; /* Ефект за преод */
+}
+
+.membership-link:hover {
+    background-color: #fff; /* Бела позадина при hover */
+    color: #333; /* Темно сив текст при hover */
 }
 
 
