@@ -760,6 +760,28 @@ form button:hover {
     max-width: 1000px; /* Ограничување на ширината на секцијата */
 }
 
+.video-section {
+    background-color: white; /* Иста позадина како carousel-section */
+    border-radius: 8px; /* Заоблени рабови */
+    padding: 20px; /* Простор околу видеото */
+    margin: 10px auto; /* Простор над и под секцијата */
+    max-width: 1000px; /* Ограничена ширина */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Суптилна сенка */
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-wrapper iframe {
+    max-width: 100%; /* Автоматско прилагодување на ширината */
+    height: auto; /* Пропорционално прилагодување на висината */
+    border-radius: 8px; /* Заоблени агли за видеото */
+}
+
+
 /* Carousel Container */
 .carousel {
     display: flex;
