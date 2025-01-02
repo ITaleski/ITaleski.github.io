@@ -366,7 +366,7 @@ section {
     background-color: black; /* Бела позадина */
     color: white; /* Црни букви */
     border: 2px solid black; /* Црна граница */
-    padding: 5px 5px;
+    padding: 5px 30px;
     border-radius: 8px;
     text-decoration: none; /* Отстрани линија под текстот */
     transition: all 0.3s; /* Ефект за преод */
@@ -773,13 +773,38 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 560px; /* Фиксна висина за видеото */
+    max-width: 100%;
 }
 
 .video-wrapper iframe {
-    max-width: 100%; /* Автоматско прилагодување на ширината */
-    height: auto; /* Пропорционално прилагодување на висината */
+    width: 100%;
+    height: 100%; /* Целосно користење на висината на контејнерот */
     border-radius: 8px; /* Заоблени агли за видеото */
 }
+
+@media (max-width: 768px) {
+    .video-wrapper {
+        height: 315px; /* Помала висина за мобилни уреди */
+    }
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: 100%; /* Пропорционално прилагодување */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-wrapper {
+        height: 240px; /* Уште помала висина за многу мали уреди */
+    }
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: 100%; /* Пропорционално прилагодување */
+    }
+}
+
 
 
 /* Carousel Container */
