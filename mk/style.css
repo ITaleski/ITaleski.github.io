@@ -580,6 +580,24 @@ footer {
   margin-top: 20px; /* Простор над футерот */
 }
 
+.centenary-section {
+    background-color: #4CAF50; /* Зелената позадина */
+    text-align: center; /* Централно порамнување на текстот */
+    padding: 10px 0; /* Простор горе и долу околу текстот */
+    margin: 0; /* Отстранување на дополнителен маргин */
+	margin: 20px 0 0 0; /* Простор над зелената трака */
+    width: 100%; /* Секцијата да биде преку целата ширина */
+}
+
+.centenary-section h1 {
+    font-family: ActayRegular, sans-serif; /* Фонт */
+    font-size: 2rem; /* Големина на текстот */
+    color: #000; /* Црни букви */
+    margin: 0; /* Отстранување на дополнителен маргин */
+    line-height: 1.2; /* Простор меѓу линиите */
+}
+
+
 /* Contact Section */
 .contact-container {
     display: flex;
