@@ -355,7 +355,7 @@ section {
     gap: 5px; /* Простор меѓу елементите */
 	border-radius: 0px; /* Заоблени агли */
 	max-width: 800px;
-	margin: 20px auto;
+	margin: 50px auto;
 }
 		
 		
@@ -439,7 +439,7 @@ section {
   background-color: #f4f4f4; /* Сива позадина */
   padding: 20px 0; /* Простор горе и долу */
   position: relative; /* За позиционирање на стрелките */
-  margin-top: 35px;
+  margin-top: 30px;
   margin-bottom:35px;
 }
 
@@ -584,8 +584,8 @@ footer {
     background-color: #4CAF50; /* Зелената позадина */
     text-align: center; /* Централно порамнување на текстот */
     padding: 10px 0; /* Простор горе и долу околу текстот */
-    margin: 0; /* Отстранување на дополнителен маргин */
-	margin: 20px 0px 50px 0; /* Простор над зелената трака */
+	margin: 0;
+	margin: 30px 0 20px 0; /* Простор над зелената трака */
     width: 100%; /* Секцијата да биде преку целата ширина */
 }
 
