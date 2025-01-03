@@ -314,7 +314,7 @@ nav ul.menu {
 /* Main Content */
 main {
   margin: 0 auto; /* Центрирање на главниот прозорец */
-  padding: 0px; /* Простор внатре во главниот прозорец */
+  padding-bottom:20px;
   max-width: 1100px; /* Ограничување на ширината на главниот прозорец */
   background-color: #f4f4f4; /* Сивкаста позадина */
   border-radius: 8px; /* Заоблени агли */
@@ -494,7 +494,7 @@ section {
 }
 .sub-text {
     font-family: RobotoCondensed-Regular, sans-serif; /* Примена на RobotoCondensed */
-    text-align: center; /* Центрирање на текстот */
+    text-align: justify; /* Центрирање на текстот */
     font-size: 18px; /* Големина на текстот */
     line-height: 1.4; /* Простор меѓу редовите */
     color: #333; /* Боја на текстот */
@@ -547,61 +547,6 @@ section {
   }
 }
 
-/* Three Arrows Section */
-.three-arrows-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #eaeaea; /* Светло сива позадина */
-  padding: 20px 0; /* Простор горе и долу */
-  position: relative; /* За позиционирање на стрелките */
-  margin-top: 30px;
-  margin-bottom: 35px;
-}
-
-/* Arrow Styles */
-.three-arrows-section .arrow {
-  font-size: 60px; /* Големина на стрелките */
-  color: black; /* Црна боја на стрелките */
-}
-
-.three-arrows-section .arrow-left,
-.three-arrows-section .arrow-center,
-.three-arrows-section .arrow-right {
-  position: absolute; /* За фиксирање на позицијата */
-  top: 50%; /* Центрирај вертикално */
-  transform: translateY(-50%); /* Подеси вертикално центрирање */
-}
-
-.three-arrows-section .arrow-left {
-  left: calc(50% - 320px); /* Позиција 220px од центарот */
-}
-
-.three-arrows-section .arrow-center {
-  left: 50%; /* Точно на средина */
-  transform: translate(-50%, -50%); /* Центрирање во двете оски */
-}
-
-.three-arrows-section .arrow-right {
-  right: calc(50% - 320px); /* Позиција 220px од центарот */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .three-arrows-section .arrow-left {
-    left: calc(50% - 145px); /* Позиција 50px од центарот за помали екрани */
-  }
-
-  .three-arrows-section .arrow-center {
-    left: 50%; /* Останува централна позиција */
-    transform: translate(-50%, -50%);
-  }
-
-  .three-arrows-section .arrow-right {
-    right: calc(50% - 145px); /* Позиција 50px од центарот за помали екрани */
-  }
-}
-
 
 /* Highlight Section Styles */
 .highlight-section {
@@ -627,8 +572,8 @@ section {
 }
 
 .highlight-box {
-  background-color: #4CAF50; /* Зеленкаста боја */
-  color: white; /* Бела боја на текстот */
+  background-color: #CAFA20; /* Зеленкаста боја */
+  color: black; /* Бела боја на текстот */
   padding: 28px; /* Простор внатре */
   border-radius: 8px; /* Заоблени агли */
   text-align: center; /* Централно порамнување на текстот */
@@ -649,8 +594,8 @@ section {
 .highlight-box a {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid black;
+  color: black;
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s;
@@ -658,7 +603,7 @@ section {
 
 .highlight-box a:hover {
   background-color: white;
-  color: #4CAF50;
+  color: black;
 }
 
 .highlight-right {
@@ -710,11 +655,11 @@ footer {
 }
 
 .centenary-section {
-    background-color: #4CAF50; /* Зелената позадина */
+    background-color: #CAFA20; /* Зелената позадина */
     text-align: center; /* Централно порамнување на текстот */
     padding: 10px 0; /* Простор горе и долу околу текстот */
 	margin: 0;
-	margin: 30px 0 20px 0; /* Простор над зелената трака */
+	margin: 50px 0 20px 0; /* Простор над зелената трака */
     width: 100%; /* Секцијата да биде преку целата ширина */
 }
 
@@ -893,7 +838,7 @@ footer {
 
 /* Боксови во левата секција */
 .contact-box {
-  background-color: #4CAF50; /* Зелена боја */
+  background-color: #CAFA20; /* Зелена боја */
   padding: 20px; /* Простор внатре */
   margin-bottom: 20px; /* Простор меѓу елементите */
   border-radius: 8px; /* Заоблени агли */
@@ -955,9 +900,9 @@ footer {
 }
 
 .submit-button {
-  background-color: #4caf50; /* Зелена боја */
-  color: white;
-  border: none;
+  background-color: #CAFA20; /* Зелена боја */
+  color: black;
+  border: 2px solid black;
   padding: 12px 20px;
   font-size: 16px;
   font-family: RobotoCondensed-Regular, sans-serif;
@@ -967,7 +912,7 @@ footer {
 }
 
 .submit-button:hover {
-  background-color: #45a049; /* Потемна зелена боја */
+  background-color: white; /* Потемна зелена боја */
 }
 
 
