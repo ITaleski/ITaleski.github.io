@@ -516,11 +516,26 @@ section {
 }
 
 @media (max-width: 768px) {
+    .white-background {
+        gap: 10px; /* Поголем простор меѓу елементите */
+        padding: 10px; /* Намален padding */
+        max-width: 100%; /* Да зафаќа целата ширина */
+        margin: 20px auto; /* Намалени маргини */
+    }
+
+    .white-background .button-left, 
+    .white-background .button-right {
+        width: 100%; /* Копчињата да зафаќаат целосна ширина */
+        text-align: center; /* Центрирање на копчињата */
+    }
+
+    .na-button {
+		
+        padding: 10px; /* Помал padding за копчињата */
+        font-size: 14px; /* Помала големина на текстот */
+    }
 	
-  .na-button {
-    padding: 5px 20px;
-  }
-  .button-left {
+	.button-left {
     margin-right: 50px; /* Простор од стрелката за помала резолуција */
   }
 
@@ -528,6 +543,29 @@ section {
     margin-left: 50px; /* Простор од стрелката за помала резолуција */
   }
 }
+@media (max-width: 768px) {
+    .sub-text {
+        font-size: 14px; /* Намалете ја големината на текстот */
+        padding-left: 5px; /* Помал padding лево */
+        padding-right: 5px; /* Помал padding десно */
+        line-height: 1.6; /* Поголем простор меѓу редовите */
+        margin-top: 5px; /* Намалете го просторот горе */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .info-section {
+        padding: 10px; /* Намален padding */
+        margin: 10px auto; /* Намалени маргини */
+        max-width: 90%; /* Ширина да биде 90% од екранот */
+    }
+
+    .info-section .sub-text {
+        text-align: justify; /* Порамнување на текстот за подобро читање */
+    }
+}
+
 
 /* Arrow style */
 .arrow-down {
@@ -579,6 +617,26 @@ section {
 	padding-left: 10px;
 	padding-right: 10px;
 }
+
+@media (max-width: 768px) {
+    .sub-text2 {
+        font-size: 16px; /* Намалете ја големината на текстот за мали екрани */
+        line-height: 1.6; /* Зголемете го просторот меѓу редовите за подобро читање */
+        padding-left: 5px; /* Намалете го левиот падинг */
+        padding-right: 5px; /* Намалете го десниот падинг */
+        margin-top: 5px; /* Намалете ја маргината над текстот */
+    }
+}
+
+@media (max-width: 480px) {
+    .sub-text2 {
+        font-size: 14px; /* Уште помала големина на текстот за многу мали уреди */
+        line-height: 1.8; /* Поголем простор меѓу редовите */
+        padding-left: 3px; /* Уште помал лев падинг */
+        padding-right: 3px; /* Уште помал десен падинг */
+    }
+}
+
 
 /* Gray Background Section */
 .gray-background {
