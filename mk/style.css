@@ -47,7 +47,7 @@ body {
 }
 
 .logo img {
-    max-width: 105px;
+    max-width: 90px;
     height: auto;
     display: block;
 }
@@ -331,8 +331,81 @@ main {
   max-width: 1000px; /* Ограничена ширина */
 }
 
+.info-section2 {
+  background-color: #f4f4f4; /* Бела позадина */
+  border-radius: 0px; /* Заоблени агли */
+  padding: 0px; /* Простор околу текстот */
+  margin: 60px auto; /* Простор околу секцијата и центрирање */
+  max-width: 600px; /* Ограничена ширина */
+}
+
+/* Секција за контакт икони */
+.contact-icons-section {
+    background-color: #f4f4f4; /* Светло сива позадина */
+    padding: 0px; /* Простор околу содржината */
+    border-radius: 8px; /* Заоблени агли */
+    margin: 0px 0px; /* Простор околу секцијата */
+    max-width: 600px; /* Ограничена ширина */
+}
+
+/* Wrapper за текстот и иконите */
+.contact-icons-wrapper {
+    display: flex;
+    justify-content: space-between; /* Текст лево, икони десно */
+    align-items: center; /* Центрирање вертикално */
+    width: 100%; /* Контејнерот зафаќа целата ширина */
+    padding: 0; /* Отстранете дополнителен простор */
+    margin: 0; /* Отстранете дополнителни маргини */
+}
+
+.contact-text {
+    font-family: RobotoCondensed-Regular, serif; /* Фонт */
+    font-size: 18px; /* Големина на текстот */
+    color: #333; /* Боја на текстот */
+    margin: 0; /* Отстранете дополнителни маргини */
+    text-align: left; /* Текстот е порамнет лево */
+    flex: 1; /* Зафаќа простор колку што треба */
+}
+
+.contact-icons {
+    display: flex;
+    gap: 15px; /* Простор меѓу иконите */
+    justify-content: flex-end; /* Иконите се поставуваат скроз десно */
+    flex: 1; /* Зафаќа простор колку што треба */
+}
+
+.icon-link img {
+    width: 50px; /* Големина на иконата */
+    height: 50px; /* Големина на иконата */
+    transition: transform 0.3s ease; /* Анимација при hover */
+}
+
+.icon-link:hover img {
+    transform: scale(1.2); /* Зголемување при hover */
+}
+
+
+@media (max-width: 768px) {
+  .info-section2 {
+    padding: 10px; /* Намалете го падингот */
+    margin: 20px auto; /* Намалете ги маргините */
+  }
+
+  .contact-form-wrapper {
+    padding: 0; /* Осигурајте дека нема дополнителни простори */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%; /* Секогаш прилагодување на целосна ширина */
+  }
+}
+
+
+
 body {
-  background-color: #f4f4f4 /*#575757; /* Позадина надвор од главниот прозорец */
+  background-color: #f4f4f4; /*#575757; /* Позадина надвор од главниот прозорец */
+
 }
 
 section {
@@ -482,6 +555,7 @@ section {
     display: block; /* Прави секој дел да биде на посебен ред */
     font-size: 130px; /* Големина на текстот */
 }
+
 .sub-text {
     font-family: RobotoCondensed-Regular, sans-serif; /* Примена на RobotoCondensed */
     text-align: center; /* Центрирање на текстот */
@@ -817,63 +891,13 @@ footer {
     }
 }
 
-/* Главна секција */
-.contact-info-section {
-  background-color: #f4f4f4; /* Светло сива позадина */
-  margin-left:40px;
-  padding: 20px; /* Простор внатре во секцијата */
-  border-radius: 8px; /* Заоблени агли */
-  max-width: 1000px; /* Ограничување на ширината */
-}
-
-/* Wrapper за левата и десната секција */
-.contact-info-wrapper {
-  display: flex;
-  justify-content: space-between; /* Простор меѓу секциите */
-  gap: 30px; /* Простор меѓу левата и десната секција */
-}
-
-/* Лева секција */
-.contact-info-left {
-  flex: 1; /* Зголемување на левата секција */
-}
-
-/* Боксови во левата секција */
-.contact-box {
-  background-color: #CAFA20; /* Зелена боја */
-  padding: 20px; /* Простор внатре */
-  margin-bottom: 20px; /* Простор меѓу елементите */
-  border-radius: 8px; /* Заоблени агли */
-  text-align: center; /* Центрирање на содржината */
-}
-
-.contact-box h2 {
-  font-family: RobotoCondensed-Regular, serif;
-  font-size: 18px; /* Големина на текстот */
-  margin-bottom: 10px; /* Простор под текстот */
-  color: black; /* Бела боја на текстот */
-}
-
-.contact-form-section {
-  background-color: #f4f4f4; /* Светло сива позадина */
-  padding: 30px; /* Простор околу секцијата */
-  margin: 30px auto; /* Центрирање со маргини */
-  border-radius: 8px; /* Заоблени агли */
-  max-width: 600px; /* Ограничување на ширината */
-}
-
 .contact-form-wrapper {
   text-align: center;
 }
 
-.contact-form-wrapper h2 {
-  font-family: PlayfairDisplay-SemiBoldItalic, serif; /* Фонтот што го користите */
-  margin-bottom: 20px;
-  color: #333;
-}
-
 .form-group {
   margin-bottom: 10px;
+  margin-right: 30px;
 }
 
 .form-group label {
@@ -911,6 +935,8 @@ footer {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .submit-button:hover {
@@ -918,57 +944,25 @@ footer {
 }
 
 
-/* Линкови со икони */
-.icon-link {
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.icon-link img {
-  width: 40px; /* Големина на иконата */
-  height: 40px; /* Големина на иконата */
-  transition: transform 0.3s ease; /* Анимација при hover */
-}
-
-.icon-link:hover img {
-  transform: scale(1.2); /* Зголемување при hover */
-}
-
-/* Десна секција */
-.contact-info-right {
-  flex: 2; /* Помал дел за десната секција */
-  background-color: transparent; /* Засега празна */
-}
-
 @media (max-width: 768px) {
-    .contact-info-section {
-        margin: 0; /* Отстранување на маргините */
-        padding: 10px; /* Намалување на падингот */
-    }
-    .contact-info-wrapper {
-        flex-direction: column; /* Вертикален приказ */
-        gap: 20px; /* Простор помеѓу секциите */
-        width: 100%; /* Ширина на wrapper */
-    }
-    .contact-info-left, 
-    .contact-info-right {
-        padding: 0; /* Отстранете го падингот */
-        margin: 0; /* Отстранете ги маргините */
-        width: 100%; /* Целосна ширина за секоја секција */
-    }
-    .contact-info-right {
-        order: 2; /* Десната секција под левата */
-    }
-    .contact-info-left {
-        order: 1; /* Левата секција останува на врвот */
-    }
-    .contact-box {
-        margin: 0 auto 20px; /* Центрирање на зелените боксови */
-    }
+  .contact-form-wrapper {
+    padding: 5px; /* Намалете го падингот за помали екрани */
+  }
+  .form-group  {
+	margin-right: 0px;
+  }
+
+  .form-group label {
+    font-size: 14px; /* Намалете ја големината на текстот за етикетите */
+	margin-right: 0px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 4px; /* Намалете го падингот внатре во полињата */
+    font-size: 14px; /* Намалете ја големината на текстот во полињата */
+  }
 }
-
-
-
 
 /* Routes Section */
 #routes {
@@ -1064,8 +1058,6 @@ footer {
         margin: 20px 5px; /* Помали маргини лево-десно */
     }
 }
-
-
 
 @media (max-width: 480px) {
     .video-wrapper {
