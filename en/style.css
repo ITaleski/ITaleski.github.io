@@ -47,7 +47,7 @@ body {
 }
 
 .logo img {
-    max-width: 150px;
+    max-width: 105px;
     height: auto;
     display: block;
 }
@@ -331,19 +331,9 @@ main {
   max-width: 1000px; /* Ограничена ширина */
 }
 
-.sub-text {
-  font-family: RobotoCondensed-Regular, sans-serif; /* Фонт */
-  font-size: 16px; /* Големина на текстот */
-  line-height: 1.6; /* Простор меѓу линиите */
-  color: #333; /* Боја на текстот */
-  text-align: left; /* Порамнување на текстот */
-}
-
-
 body {
   background-color: #f4f4f4 /*#575757; /* Позадина надвор од главниот прозорец */
 }
-
 
 section {
     margin-bottom: 10px;
@@ -493,6 +483,18 @@ section {
     font-size: 130px; /* Големина на текстот */
 }
 .sub-text {
+    font-family: RobotoCondensed-Regular, sans-serif; /* Примена на RobotoCondensed */
+    text-align: center; /* Центрирање на текстот */
+    font-size: 18px; /* Големина на текстот */
+    line-height: 1.4; /* Простор меѓу редовите */
+    color: #333; /* Боја на текстот */
+    margin-top: 10px; /* Простор над под-текстот */
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.sub-text2 {
     font-family: RobotoCondensed-Regular, sans-serif; /* Примена на RobotoCondensed */
     text-align: justify; /* Центрирање на текстот */
     font-size: 18px; /* Големина на текстот */
