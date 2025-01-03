@@ -358,6 +358,44 @@ section {
 	padding-bottom: 0px;
 }
 
+.break-text1 {
+    font-family: Actay-Regular;
+    text-align: center;
+    font-size: 25px; /* Големина на фонтот */
+    padding: 20px 0px; /* Простор околу текстот */
+	padding-bottom: 0px;
+}
+
+.the-text1 {
+	font-family: PlayfairDisplay-SemiBoldItalic;
+	line-height: 1.0; /* Простор помеѓу редовите */
+    text-align: center;
+    font-size: 90px; /* Големина на фонтот */
+    padding: 0px 0px; /* Простор околу текстот */
+}
+
+.sub-text1 {
+  font-family: RobotoCondensed-Regular, sans-serif; /* Фонт */
+  font-size: 16px; /* Големина на текстот */
+  line-height: 1.6; /* Простор меѓу линиите */
+  color: #333; /* Боја на текстот */
+  text-align: left; /* Порамнување на текстот */
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.routes-section1 {
+    background-color: #333; /* Темно сива позадина */
+    text-align: center; /* Централно порамнување на текстот */
+    padding: 20px 0; /* Простор горе и долу */
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    border-radius: 8px; /* Заоблени рабови */
+}
 
 /* White background */
 .white-background {
@@ -641,6 +679,47 @@ footer {
     background-color: #fff; /* Бела позадина при hover */
     color: #333; /* Темно сив текст при hover */
 }
+
+
+/* Главна секција Misija */
+.misija-section {
+    background-color: #f4f4f4; /* Бела позадина */
+    margin: 10px 5px; /* Маргини горе/долу 10px, лево/десно 5px */
+    padding: 10px; /* Падинг од сите страни */
+    border-radius: 8px; /* Заоблени агли */
+}
+
+/* Wrapper за левата и десната секција */
+.misija-wrapper {
+    display: flex;
+    justify-content: space-between; /* Простор меѓу секциите */
+    gap: 30px; /* Растојание меѓу левата и десната секција */
+}
+
+/* Лева секција */
+.misija-left {
+    flex: 1; /* Растегнување за 50% од просторот */
+    margin: 0; /* Нема маргини */
+}
+
+.misija-left img {
+    max-height: 550px; /* Ограничување на максималната висина */
+    width: auto; /* Автоматско прилагодување на ширината */
+    display: block; /* За отстранување на дополнителни празнини околу сликата */
+    margin: 0 auto; /* Центрирање ако е помала од контејнерот */
+    border-radius: 8px; /* Заоблени агли за сликата */
+    object-fit: cover; /* Гарантира дека ќе се задржи целосниот приказ на сликата */
+}
+
+
+/* Десна секција */
+.misija-right {
+    flex: 2; /* Растегнување за 50% од просторот */
+    margin: 0; /* Нема маргини */
+    background-color: #f4f4f4; /* Светло сива позадина за визуелна проверка */
+    border-radius: 8px; /* Заоблени агли */
+}
+
 
 
 /* Contact Section */
