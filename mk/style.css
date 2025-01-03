@@ -484,7 +484,7 @@ section {
 
 @media (max-width: 768px) {
   .the-text {
-    font-size: 100px; /* Намалување на големината на фонтот */
+    font-size: 90px; /* Намалување на големината на фонтот */
   }
 }
 
@@ -994,25 +994,32 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .contact-info-wrapper {
-    flex-direction: column; /* Претвори го распоредот во вертикален */
-    gap: 20px; /* Простор меѓу секциите */
-  }
-
-  .contact-info-left, 
-  .contact-info-right {
-    flex: none; /* Отстранете го растегнувањето */
-    width: 100%; /* Целосна ширина за секоја секција */
-  }
-
-  .contact-info-right {
-    order: 2; /* Преместување на десната секција под левата */
-  }
-
-  .contact-info-left {
-    order: 1; /* Левата секција останува на врвот */
-  }
+    .contact-info-section {
+        margin: 0; /* Отстранување на маргините */
+        padding: 10px; /* Намалување на падингот */
+    }
+    .contact-info-wrapper {
+        flex-direction: column; /* Вертикален приказ */
+        gap: 20px; /* Простор помеѓу секциите */
+        width: 100%; /* Ширина на wrapper */
+    }
+    .contact-info-left, 
+    .contact-info-right {
+        padding: 0; /* Отстранете го падингот */
+        margin: 0; /* Отстранете ги маргините */
+        width: 100%; /* Целосна ширина за секоја секција */
+    }
+    .contact-info-right {
+        order: 2; /* Десната секција под левата */
+    }
+    .contact-info-left {
+        order: 1; /* Левата секција останува на врвот */
+    }
+    .contact-box {
+        margin: 0 auto 20px; /* Центрирање на зелените боксови */
+    }
 }
+
 
 
 
