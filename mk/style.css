@@ -252,6 +252,14 @@ nav ul.menu {
     }
 }
 
+@media (max-width: 768px) {
+    nav ul li.language {
+        margin-left: 0; /* Отстранете го автоматското поместување десно */
+        text-align: center; /* Центрирање на текстот */
+    }
+}
+
+
 /* Hero Image */
 .hero-image {
     position: relative; /* Потребно за правилно поставување на апсолутниот текст */
@@ -473,6 +481,13 @@ section {
     font-size: 130px; /* Големина на фонтот */
     padding: 0px 0px; /* Простор околу текстот */
 }
+
+@media (max-width: 768px) {
+  .the-text {
+    font-size: 100px; /* Намалување на големината на фонтот */
+  }
+}
+
 .text-line {
     display: block; /* Прави секој дел да биде на посебен ред */
     font-size: 130px; /* Големина на текстот */
@@ -531,6 +546,62 @@ section {
     right: calc(50% - 145px); /* Позиција 50px од центарот за помали екрани */
   }
 }
+
+/* Three Arrows Section */
+.three-arrows-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea; /* Светло сива позадина */
+  padding: 20px 0; /* Простор горе и долу */
+  position: relative; /* За позиционирање на стрелките */
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+/* Arrow Styles */
+.three-arrows-section .arrow {
+  font-size: 60px; /* Големина на стрелките */
+  color: black; /* Црна боја на стрелките */
+}
+
+.three-arrows-section .arrow-left,
+.three-arrows-section .arrow-center,
+.three-arrows-section .arrow-right {
+  position: absolute; /* За фиксирање на позицијата */
+  top: 50%; /* Центрирај вертикално */
+  transform: translateY(-50%); /* Подеси вертикално центрирање */
+}
+
+.three-arrows-section .arrow-left {
+  left: calc(50% - 320px); /* Позиција 220px од центарот */
+}
+
+.three-arrows-section .arrow-center {
+  left: 50%; /* Точно на средина */
+  transform: translate(-50%, -50%); /* Центрирање во двете оски */
+}
+
+.three-arrows-section .arrow-right {
+  right: calc(50% - 320px); /* Позиција 220px од центарот */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .three-arrows-section .arrow-left {
+    left: calc(50% - 145px); /* Позиција 50px од центарот за помали екрани */
+  }
+
+  .three-arrows-section .arrow-center {
+    left: 50%; /* Останува централна позиција */
+    transform: translate(-50%, -50%);
+  }
+
+  .three-arrows-section .arrow-right {
+    right: calc(50% - 145px); /* Позиција 50px од центарот за помали екрани */
+  }
+}
+
 
 /* Highlight Section Styles */
 .highlight-section {
@@ -799,87 +870,151 @@ footer {
     }
 }
 
-
-
-/* Contact Section */
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    gap: 20px; /* Простор помеѓу текстот и формата */
+/* Главна секција */
+.contact-info-section {
+  background-color: #f4f4f4; /* Светло сива позадина */
+  margin-left:40px;
+  padding: 20px; /* Простор внатре во секцијата */
+  border-radius: 8px; /* Заоблени агли */
+  max-width: 1000px; /* Ограничување на ширината */
 }
 
-.contact-info {
-    flex: 1;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
+/* Wrapper за левата и десната секција */
+.contact-info-wrapper {
+  display: flex;
+  justify-content: space-between; /* Простор меѓу секциите */
+  gap: 30px; /* Простор меѓу левата и десната секција */
 }
 
-.contact-info p {
-    margin: 0 0 10px;
+/* Лева секција */
+.contact-info-left {
+  flex: 1; /* Зголемување на левата секција */
 }
 
-form {
-    flex: 1;
-    max-width: 100%;
-    padding: 25px 30px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    font-family: Arial, sans-serif;
+/* Боксови во левата секција */
+.contact-box {
+  background-color: #4CAF50; /* Зелена боја */
+  padding: 20px; /* Простор внатре */
+  margin-bottom: 20px; /* Простор меѓу елементите */
+  border-radius: 8px; /* Заоблени агли */
+  text-align: center; /* Центрирање на содржината */
 }
 
-form div {
-    margin-bottom: 20px;
-    position: relative;
+.contact-box h2 {
+  font-family: RobotoCondensed-Regular, serif;
+  font-size: 18px; /* Големина на текстот */
+  margin-bottom: 10px; /* Простор под текстот */
+  color: black; /* Бела боја на текстот */
 }
 
-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #333;
-    font-weight: bold;
+.contact-form-section {
+  background-color: #f4f4f4; /* Светло сива позадина */
+  padding: 30px; /* Простор околу секцијата */
+  margin: 30px auto; /* Центрирање со маргини */
+  border-radius: 8px; /* Заоблени агли */
+  max-width: 600px; /* Ограничување на ширината */
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #555;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+.contact-form-wrapper {
+  text-align: center;
 }
 
-form input:focus, form textarea:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-    outline: none;
+.contact-form-wrapper h2 {
+  font-family: PlayfairDisplay-SemiBoldItalic, serif; /* Фонтот што го користите */
+  margin-bottom: 20px;
+  color: #333;
 }
 
-form button {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
+.form-group {
+  margin-bottom: 10px;
 }
 
-form button:hover {
-    background-color: #45a049;
+.form-group label {
+  display: block;
+  font-family: RobotoCondensed-Regular, sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
 }
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-family: RobotoCondensed-Regular, sans-serif;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4caf50; /* Зелена боја при фокус */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+.submit-button {
+  background-color: #4caf50; /* Зелена боја */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: RobotoCondensed-Regular, sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049; /* Потемна зелена боја */
+}
+
+
+/* Линкови со икони */
+.icon-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.icon-link img {
+  width: 40px; /* Големина на иконата */
+  height: 40px; /* Големина на иконата */
+  transition: transform 0.3s ease; /* Анимација при hover */
+}
+
+.icon-link:hover img {
+  transform: scale(1.2); /* Зголемување при hover */
+}
+
+/* Десна секција */
+.contact-info-right {
+  flex: 2; /* Помал дел за десната секција */
+  background-color: transparent; /* Засега празна */
+}
+
+@media (max-width: 768px) {
+  .contact-info-wrapper {
+    flex-direction: column; /* Претвори го распоредот во вертикален */
+    gap: 20px; /* Простор меѓу секциите */
+  }
+
+  .contact-info-left, 
+  .contact-info-right {
+    flex: none; /* Отстранете го растегнувањето */
+    width: 100%; /* Целосна ширина за секоја секција */
+  }
+
+  .contact-info-right {
+    order: 2; /* Преместување на десната секција под левата */
+  }
+
+  .contact-info-left {
+    order: 1; /* Левата секција останува на врвот */
+  }
+}
+
+
 
 /* Routes Section */
 #routes {
