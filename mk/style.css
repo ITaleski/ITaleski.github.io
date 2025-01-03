@@ -407,6 +407,10 @@ section {
 }
 
 @media (max-width: 768px) {
+	
+  .na-button {
+    padding: 5px 20px;
+  }
   .button-left {
     margin-right: 50px; /* Простор од стрелката за помала резолуција */
   }
@@ -472,21 +476,21 @@ section {
 }
 
 .arrow-left {
-  left: calc(50% - 300px); /* Позиција 220px од центарот */
+  left: calc(50% - 320px); /* Позиција 220px од центарот */
 }
 
 .arrow-right {
-  right: calc(50% - 300px); /* Позиција 220px од центарот */
+  right: calc(50% - 320px); /* Позиција 220px од центарот */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .arrow-left {
-    left: calc(50% - 100px); /* Позиција 50px од центарот за помали екрани */
+    left: calc(50% - 145px); /* Позиција 50px од центарот за помали екрани */
   }
 
   .arrow-right {
-    right: calc(50% - 100px); /* Позиција 50px од центарот за помали екрани */
+    right: calc(50% - 145px); /* Позиција 50px од центарот за помали екрани */
   }
 }
 
