@@ -721,6 +721,31 @@ footer {
 }
 
 
+@media (max-width: 768px) {
+    .misija-wrapper {
+        flex-direction: column; /* Поставете вертикален приказ */
+        gap: 20px; /* Простор помеѓу секциите */
+    }
+
+    .misija-left, .misija-right {
+        flex: none; /* Отстранете го растегнувањето */
+        width: 100%; /* Секоја секција ќе зафаќа цела ширина */
+        margin: 0; /* Отстранете дополнителни маргини */
+    }
+
+    .misija-left img {
+        max-height: 300px; /* Ограничете ја висината за помали екрани */
+        width: 100%; /* Растегнете ја сликата на целата ширина */
+    }
+
+    .sub-text1, .routes-section1 {
+        margin-left: 10px; /* Намалете маргините за помали екрани */
+        margin-right: 10px;
+    }
+}
+
+
+
 
 /* Contact Section */
 .contact-container {
