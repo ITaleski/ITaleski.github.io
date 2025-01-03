@@ -379,7 +379,7 @@ section {
   font-size: 16px; /* Големина на текстот */
   line-height: 1.6; /* Простор меѓу линиите */
   color: #333; /* Боја на текстот */
-  text-align: left; /* Порамнување на текстот */
+  text-align: justify; /* Порамнување на текстот */
   margin-top: 50px;
   margin-left: 30px;
   margin-bottom: 30px;
@@ -735,7 +735,7 @@ footer {
 
     .misija-left img {
         max-height: 300px; /* Ограничете ја висината за помали екрани */
-        width: 100%; /* Растегнете ја сликата на целата ширина */
+        height: 100%; /* Растегнете ја сликата на целата ширина */
     }
 
     .sub-text1, .routes-section1 {
@@ -744,6 +744,60 @@ footer {
     }
 }
 
+/* Главна секција */
+.new-section {
+    background-color: #f4f4f4; /* Бела позадина */
+    margin: 10px 5px; /* Маргини горе/долу 10px, лево/десно 5px */
+    padding: 10px; /* Падинг од сите страни */
+    border-radius: 8px; /* Заоблени агли */
+}
+
+/* Wrapper за трите секции */
+.new-wrapper {
+    display: flex;
+    justify-content: space-between; /* Простор меѓу секциите */
+    gap: 30px; /* Растојание меѓу секциите */
+}
+
+/* Прва и трета секција (Слика) */
+.new-left, .new-right {
+    flex: 1; /* Секоја слика зафаќа една третина */
+    margin: 0;
+}
+
+.new-left img, .new-right img {
+    max-height: 550px; /* Ограничување на максималната висина */
+    width: auto; /* Автоматско прилагодување на ширината */
+    display: block; /* Отстранување на дополнителни празнини */
+    margin: 0 auto; /* Центрирање ако е помала */
+    border-radius: 8px; /* Заоблени агли */
+    object-fit: cover; /* Гаранција за целосен приказ на сликата */
+}
+
+/* Централна секција (Текст) */
+.new-center {
+    flex: 1; /* Централната секција зафаќа една третина */
+    text-align: center; /* Центрирање на текстот */
+    margin: 0;
+}
+
+/* Респонзивен дизајн */
+@media (max-width: 768px) {
+    .new-wrapper {
+        flex-direction: column; /* Вертикално подредување */
+        gap: 20px; /* Простор помеѓу секциите */
+    }
+
+    .new-left, .new-center, .new-right {
+        flex: none; /* Отстранете го растегнувањето */
+        width: 100%; /* Целосна ширина */
+    }
+
+    .new-left img, .new-right img {
+        max-height: 300px; /* Ограничување на висината за помали екрани */
+        height: 100%; /* Растегнување до цела ширина */
+    }
+}
 
 
 
