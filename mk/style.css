@@ -447,7 +447,7 @@ section {
 
 .sub-text1 {
   font-family: RobotoCondensed-Regular, sans-serif; /* Фонт */
-  font-size: 16px; /* Големина на текстот */
+  font-size: 18px; /* Големина на текстот */
   line-height: 1.6; /* Простор меѓу линиите */
   color: #333; /* Боја на текстот */
   text-align: justify; /* Порамнување на текстот */
@@ -460,10 +460,10 @@ section {
 .routes-section1 {
     background-color: #333; /* Темно сива позадина */
     text-align: center; /* Централно порамнување на текстот */
-    padding: 20px 0; /* Простор горе и долу */
-    margin-top: 50px;
+    padding: 15px 0; /* Простор горе и долу */
+    margin-top: 30px;
     margin-left: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-right: 30px;
     border-radius: 8px; /* Заоблени рабови */
 }
@@ -543,29 +543,9 @@ section {
     margin-left: 50px; /* Простор од стрелката за помала резолуција */
   }
 }
-@media (max-width: 768px) {
-    .sub-text {
-        font-size: 14px; /* Намалете ја големината на текстот */
-        padding-left: 5px; /* Помал padding лево */
-        padding-right: 5px; /* Помал padding десно */
-        line-height: 1.6; /* Поголем простор меѓу редовите */
-        margin-top: 5px; /* Намалете го просторот горе */
-		text-align: center;
-    }
-}
 
 
-@media (max-width: 768px) {
-    .info-section {
-        padding: 10px; /* Намален padding */
-        margin: 10px auto; /* Намалени маргини */
-        max-width: 90%; /* Ширина да биде 90% од екранот */
-    }
 
-    .info-section .sub-text {
-        text-align: justify; /* Порамнување на текстот за подобро читање */
-    }
-}
 
 
 /* Arrow style */
@@ -599,19 +579,31 @@ section {
     font-family: RobotoCondensed-Regular, sans-serif; /* Примена на RobotoCondensed */
     text-align: center; /* Центрирање на текстот */
     font-size: 18px; /* Големина на текстот */
-    line-height: 1.4; /* Простор меѓу редовите */
+    line-height: 1.6; /* Простор меѓу редовите */
     color: #333; /* Боја на текстот */
     margin-top: 10px; /* Простор над под-текстот */
-	width: 100%;
-	padding-left: 10px;
-	padding-right: 10px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+
+@media (max-width: 768px) {
+    .sub-text {
+        font-size: 18px; /* Намалете ја големината на текстот */
+        padding-left: 5px; /* Помал padding лево */
+        padding-right: 15px; /* Помал padding десно */
+        line-height: 1.6; /* Поголем простор меѓу редовите */
+        margin-top: 5px; /* Намалете го просторот горе */
+        text-align: center !important; /* Принудно центрирање */
+    }
+}
+
 
 .sub-text2 {
     font-family: RobotoCondensed-Regular, sans-serif; /* Примена на RobotoCondensed */
     text-align: justify; /* Центрирање на текстот */
     font-size: 18px; /* Големина на текстот */
-    line-height: 1.4; /* Простор меѓу редовите */
+    line-height: 1.6; /* Простор меѓу редовите */
     color: #333; /* Боја на текстот */
     margin-top: 10px; /* Простор над под-текстот */
 	width: 100%;
@@ -621,7 +613,7 @@ section {
 
 @media (max-width: 768px) {
     .sub-text2 {
-        font-size: 16px; /* Намалете ја големината на текстот за мали екрани */
+        font-size: 18px; /* Намалете ја големината на текстот за мали екрани */
         line-height: 1.6; /* Зголемете го просторот меѓу редовите за подобро читање */
         padding-left: 5px; /* Намалете го левиот падинг */
         padding-right: 5px; /* Намалете го десниот падинг */
@@ -631,7 +623,7 @@ section {
 
 @media (max-width: 480px) {
     .sub-text2 {
-        font-size: 14px; /* Уште помала големина на текстот за многу мали уреди */
+        font-size: 16px; /* Уште помала големина на текстот за многу мали уреди */
         line-height: 1.8; /* Поголем простор меѓу редовите */
         padding-left: 3px; /* Уште помал лев падинг */
         padding-right: 3px; /* Уште помал десен падинг */
@@ -816,19 +808,20 @@ footer {
 
 .membership-link {
     font-family: Actay-Regular, sans-serif; /* Фонт */
-    font-size: 24px; /* Големина на текстот */
-    color: #fff; /* Бели букви */
+    font-size: 20px; /* Големина на текстот */
+    color: #333; /* Бели букви */
     text-decoration: none; /* Без подцртување */
-    background-color: transparent; /* Без позадина за линкот */
-    padding: 10px 20px; /* Простор околу текстот */
+    background-color: white; /* Без позадина за линкот */
+    padding: 6px 30px; /* Простор околу текстот */
+	padding-bottom:6px;
     border: 2px solid #fff; /* Бела граница */
     border-radius: 5px; /* Заоблени рабови на линкот */
     transition: background-color 0.3s, color 0.3s; /* Ефект за преод */
 }
 
 .membership-link:hover {
-    background-color: #fff; /* Бела позадина при hover */
-    color: #333; /* Темно сив текст при hover */
+    background-color: #333; /* Бела позадина при hover */
+    color: #fff; /* Темно сив текст при hover */
 }
 
 
@@ -1042,7 +1035,6 @@ footer {
     align-items: center;
     margin-bottom: 20px;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     background-color: #f9f9f9;
     gap: 20px;
@@ -1052,7 +1044,6 @@ footer {
     max-width: 150px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .route-info {
@@ -1080,6 +1071,14 @@ footer {
     max-width: 1000px; /* Ограничување на ширината на секцијата */
 }
 
+.text-section {
+    background-color: #f4f4f4; /* Бела позадина */
+    border-radius: 8px; /* Заоблени рабови */
+    padding: 20px; /* Простор внатре во секцијата */
+    margin: 30px 30px; /* Простор над и под секцијата */
+    max-width: 1000px; /* Ограничување на ширината на секцијата */
+}
+
 .video-section {
     background-color: white; /* Бела позадина */
     border-radius: 8px; /* Заоблени рабови */
@@ -1090,7 +1089,6 @@ footer {
 	margin-right: 0px;
 	margin-top: 50px;
     max-width: 1000px; /* Ограничена ширина */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Сенка */
 }
 
 .video-wrapper {
